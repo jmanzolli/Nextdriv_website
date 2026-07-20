@@ -1,6 +1,6 @@
-# dependencies
+.DS_Store
 node_modules/
 .vscode/
 .idea/
 .wix/
-jsconfig.json
+.tmp_logos/

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Nextdriv</title>
+  <meta name="description" content="Discover the electric mobility era. Reach out to start your journey today.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><img src="assets/img/logo-white.png" alt="Nextdriv"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div class="nav-lang">
+          <a href="contact.html" class="active">EN</a><span>|</span><a href="fr/contact.html">FR</a>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      </div>
+    </div>
+  </nav>
+
+  <section style="padding-top:calc(var(--nav-h) + 90px);">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h1>Ready to get started?</h1>
+        <p>Discover the electric mobility era.<br>Reach out to start your journey today.</p>
+        <div class="contact-meta">
+          <p><a href="mailto:jonatas.manzolli@nextdriv.com">jonatas.manzolli@nextdriv.com</a></p>
+          <p style="margin-top:16px;">Macdonald Engineering Building<br>817 Sherbrooke Street West<br>Montreal, QC H3A 0C3</p>
+        </div>
+      </div>
+      <form action="https://formsubmit.co/jonatas.manzolli@nextdriv.com" method="POST">
+        <input type="hidden" name="_subject" value="New contact from nextdriv.ca">
+        <input type="hidden" name="_next" value="https://nextdriv.ca/thanks.html">
+        <input type="text" name="_honey" style="display:none">
+        <div class="field-row">
+          <div class="field">
+            <label for="fname">First name*</label>
+            <input type="text" id="fname" name="first_name" required>
+          </div>
+          <div class="field">
+            <label for="lname">Last name*</label>
+            <input type="text" id="lname" name="last_name" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone*</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--accent">Send <span class="btn-arrow">&#8594;</span></button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Join our newsletter</h4>
+          <form class="newsletter-form" action="https://formsubmit.co/jonatas.manzolli@nextdriv.com" method="POST">
+            <input type="hidden" name="_subject" value="Newsletter signup — nextdriv.ca">
+            <input type="hidden" name="_next" value="https://nextdriv.ca/thanks.html">
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/imats-lab/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/jmanzolli" target="_blank" rel="noopener">Github</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a href="mailto:jonatas.manzolli@nextdriv.com">jonatas.manzolli@nextdriv.com</a></p>
+          <p style="margin-top:16px;">Macdonald Engineering Building<br>817 Sherbrooke Street West<br>Montreal, QC H3A 0C3</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <img src="assets/img/logo-white.png" alt="Nextdriv">
+        <span>&copy; 2026 by Nextdriv</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
