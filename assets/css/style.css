@@ -315,12 +315,38 @@ section { padding: 100px 0; }
   height: 0;
 }
 
-.demo-wrap iframe {
+.demo-wrap iframe,
+.demo-wrap video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ---------- Icon cards ---------- */
+.card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(26, 77, 255, 0.14);
+  border: 1px solid rgba(26, 77, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px 0 0 28px;
+}
+
+.card-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: #5f83ff;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ---------- Team ---------- */
