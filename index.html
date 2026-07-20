@@ -73,28 +73,36 @@
 
   <section class="reveal">
     <div class="container">
-      <div class="panel">
-        <p class="kicker">Measured Results</p>
-        <h2 class="section-title">Evidence, not estimates.</h2>
-        <div class="stats-grid">
-          <div class="stat">
-            <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 17l-8.5-8.5-5 5L2 7"/><path d="M16 17h6v-6"/></svg></div>
-            <div class="stat-number">&minus;30<span style="font-size:0.55em;">%</span></div>
-            <p class="stat-desc"><strong>Fleet charging costs</strong> &mdash; up to 30% lower with optimized charging schedules.</p>
+      <div class="console">
+        <div class="console-head">
+          <div>
+            <p class="kicker">Measured Results</p>
+            <h2 class="section-title" style="margin-bottom:0;">Evidence, not estimates.</h2>
           </div>
-          <div class="stat">
-            <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 19a9.5 9.5 0 1 1 17 0"/><path d="M12 15l4.5-5.5"/><circle cx="12" cy="15" r="1"/></svg></div>
-            <div class="stat-number">&minus;500<span style="font-size:0.55em;">kW</span></div>
-            <p class="stat-desc"><strong>Peak demand</strong> &mdash; avoided on a simulated transit depot through coordinated charging.</p>
+          <span class="console-badge"><span class="dot"></span>SIMULATION OUTPUT &middot; REAL FLEET DATA</span>
+        </div>
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-label"><span>Charging costs</span><span class="src-tag">Applied Energy</span></div>
+            <div class="metric-number"><span class="sign">&minus;</span><span data-count="30">30</span><span class="unit">%</span></div>
+            <p class="metric-desc">Up to 30% lower energy spend with optimized charging schedules.</p>
+            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gdownen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f83ff" stop-opacity="0.25"/><stop offset="1" stop-color="#5f83ff" stop-opacity="0"/></linearGradient></defs><path d="M2 8 C 30 10, 50 22, 70 27 S 105 37, 116 39 L 116 46 L 2 46 Z" fill="url(#gdownen)"/><path d="M2 8 C 30 10, 50 22, 70 27 S 105 37, 116 39" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="116" cy="39" r="3" fill="#5f83ff"/></svg></div>
           </div>
-          <div class="stat">
-            <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="8" width="16" height="9" rx="2"/><path d="M22 11v3"/><path d="M10 9.5v6M7 12.5h6"/></svg></div>
-            <div class="stat-number">+4<span style="font-size:0.55em;">yrs</span></div>
-            <p class="stat-desc"><strong>Battery life</strong> &mdash; up to 4 years added with degradation-aware charging strategies.</p>
+          <div class="metric">
+            <div class="metric-label"><span>Peak demand</span><span class="src-tag">Energy</span></div>
+            <div class="metric-number"><span class="sign">&minus;</span><span data-count="500">500</span><span class="unit">kW</span></div>
+            <p class="metric-desc">Avoided on a simulated transit depot through coordinated charging.</p>
+            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><path d="M2 38 C 25 36, 35 8, 52 6 C 69 8, 80 36, 116 38" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.8" stroke-dasharray="4 4"/><path d="M2 38 C 22 36, 30 20, 44 19 L 76 19 C 92 21, 102 36, 116 38" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="60" cy="19" r="3" fill="#5f83ff"/></svg></div>
+          </div>
+          <div class="metric">
+            <div class="metric-label"><span>Battery life</span><span class="src-tag">IEEE Access</span></div>
+            <div class="metric-number"><span class="sign">+</span><span data-count="4">4</span><span class="unit">yrs</span></div>
+            <p class="metric-desc">Added service life with degradation-aware charging strategies.</p>
+            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gupen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f83ff" stop-opacity="0.25"/><stop offset="1" stop-color="#5f83ff" stop-opacity="0"/></linearGradient></defs><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6 L 116 46 L 2 46 Z" fill="url(#gupen)"/><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="116" cy="6" r="3" fill="#5f83ff"/></svg></div>
           </div>
         </div>
-        <div class="stat-src">
-          <span>From simulation studies on real electric bus fleet data, peer-reviewed in IEEE&nbsp;Access, Energy, and Applied&nbsp;Energy.</span>
+        <div class="console-src">
+          <span>From peer-reviewed simulation studies on real electric bus fleet data.</span>
           <a href="about.html">Read the research &rarr;</a>
         </div>
       </div>
