@@ -40,4 +40,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/solutions.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/solutions.html"/>
   </url>
+  <url>
+    <loc>https://nextdriv.ca/pilot.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/pilot.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/pilot.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/fr/pilot.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/pilot.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/pilot.html"/>
+  </url>
 </urlset>
