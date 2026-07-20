@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nextdriv | Solutions personnalisées pour flottes de VE</title>
-  <meta name="description" content="Nextdriv offre aux exploitants de flottes des services et des solutions personnalisées pour planifier leur transition vers des flottes électriques, optimiser les opérations quotidiennes, recharger plus intelligemment et réduire les coûts.">
+  <title>Nextdriv | Logiciel d'aide à la décision pour flottes électriques</title>
+  <meta name="description" content="Nextdriv est un logiciel d'aide à la décision issu de l'Université McGill qui aide les sociétés de transport, les municipalités et les exploitants de flottes à planifier l'électrification et à réduire les coûts de recharge.">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 
@@ -36,15 +37,21 @@
     <div class="container">
       <div class="hero-content">
         <h1>Électrifiez votre flotte sans improviser</h1>
-        <a href="contact.html" class="btn">Commencer <span class="btn-arrow">&#8594;</span></a>
-        <p>Chez NextDriv, nous offrons aux exploitants de flottes des services et des solutions personnalisées pour planifier leur transition vers des flottes électriques, optimiser les opérations quotidiennes, recharger plus intelligemment, prolonger la durée de vie des batteries et réduire les coûts&mdash;en transformant les données et l'expertise en décisions claires.</p>
+        <p style="margin-top:0;">Nextdriv est un logiciel d'aide à la décision pour les sociétés de transport, les municipalités et les exploitants de flottes. Simulez vos trajets réels, dimensionnez vos véhicules et vos bornes, et réduisez vos coûts de recharge quotidiens&mdash;avant et après vos investissements.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:36px;">
+          <a href="contact.html" class="btn">Réserver une démo <span class="btn-arrow">&#8594;</span></a>
+          <a href="#overview" class="btn btn--dark" style="border:1px solid rgba(255,255,255,0.35);">Voir l'aperçu de 2 minutes <span class="btn-arrow">&#9654;</span></a>
+        </div>
+        <p class="hero-trust">Une entreprise dérivée de l'Université McGill &middot; Méthodes publiées dans IEEE&nbsp;Access, Energy et Applied&nbsp;Energy</p>
       </div>
     </div>
   </header>
 
-  <section class="reveal">
+  <section class="reveal" id="overview">
     <div class="container">
-      <div class="demo-wrap">
+      <p class="kicker">La plateforme</p>
+      <h2 class="section-title">Découvrez Nextdriv en 2 minutes.</h2>
+      <div class="demo-wrap" style="margin-top:48px;">
         <video controls preload="metadata" poster="../assets/img/platform-screenshot.png">
           <source src="../assets/videos/nextdriv-teaser.mp4" type="video/mp4">
         </video>
@@ -55,21 +62,22 @@
   <section class="reveal">
     <div class="container">
       <div class="panel">
-        <h2 class="section-title">Avec nos solutions personnalisées, tirez le meilleur parti de votre flotte</h2>
+        <h2 class="section-title">Ce que la planification et la recharge optimisées apportent</h2>
         <div class="stats-grid">
           <div>
-            <div class="stat-number">&gt; 30%</div>
-            <p class="stat-desc">Réduction des coûts opérationnels de la flotte grâce à nos solutions de recharge et d'optimisation intelligentes.</p>
+            <div class="stat-number">Jusqu'à 30 %</div>
+            <p class="stat-desc">Réduction des coûts de recharge de la flotte grâce aux horaires optimisés &mdash; issue de nos études d'optimisation évaluées par des pairs.</p>
           </div>
           <div>
-            <div class="stat-number">+500 kW</div>
-            <p class="stat-desc">Pics de consommation du réseau évités grâce à une recharge coordonnée, ce qui allège la pression sur le réseau et réduit les coûts énergétiques.</p>
+            <div class="stat-number">500 kW</div>
+            <p class="stat-desc">Pic de puissance évité sur un dépôt de transport simulé grâce à la recharge coordonnée &mdash; moins de pression sur le réseau et de frais de puissance.</p>
           </div>
           <div>
-            <div class="stat-number">4 ans</div>
-            <p class="stat-desc">Durée de vie prolongée de la batterie obtenue grâce à des stratégies de charge optimisées.</p>
+            <div class="stat-number">Jusqu'à 4 ans</div>
+            <p class="stat-desc">Durée de vie supplémentaire des batteries grâce à des stratégies de recharge tenant compte de la dégradation &mdash; publiées dans IEEE Access.</p>
           </div>
         </div>
+        <p style="margin-top:36px;font-size:14px;color:#666;">Résultats issus d'études de simulation sur des données réelles de flottes de bus électriques. <a href="about.html" style="color:#1240D6;">Consulter les publications &rarr;</a></p>
       </div>
     </div>
   </section>
@@ -112,7 +120,7 @@
         <h2 class="section-title">Portée par une équipe d'ingénieurs de McGill et appuyée par des recherches évaluées par des pairs.</h2>
         <p class="section-sub">Notre mission est d'aider les opérateurs à atteindre une plus grande efficacité, des économies de coûts et un meilleur impact environnemental.</p>
         <div style="margin-top:36px;">
-          <a href="about.html" class="btn">En savoir plus <span class="btn-arrow">&#8594;</span></a>
+          <a href="about.html" class="btn">Rencontrez l'équipe <span class="btn-arrow">&#8594;</span></a>
         </div>
       </div>
     </div>
@@ -179,12 +187,26 @@
     </div>
   </section>
 
+  <section class="reveal">
+    <div class="container split">
+      <div>
+        <p class="kicker">Programme pilote</p>
+        <h2 class="section-title">Mettez les données de votre flotte à l'épreuve.</h2>
+        <p class="section-sub">Nous menons des projets pilotes structurés avec un nombre limité de flottes : vous partagez vos trajets, vos horaires et vos tarifs d'électricité &mdash; nous livrons une analyse complète d'électrification ou d'optimisation de la recharge de vos opérations, généralement en 8 à 12 semaines. Les résultats vous appartiennent, quoi qu'il arrive.</p>
+        <div style="margin-top:36px;">
+          <a href="contact.html" class="btn btn--accent">Demander une proposition pilote <span class="btn-arrow">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="split-img"><img src="../assets/img/bus-charging.jpg" alt="Bus électrique en recharge au dépôt"></div>
+    </div>
+  </section>
+
   <section class="cta reveal">
     <div class="container">
       <div class="panel">
-        <h2>Prêt à commencer ?</h2>
-        <p>Nous proposons des services de conseil et d'optimisation aux propriétaires de flottes pour gérer la charge de manière intelligente, réduire les coûts d'exploitation et prolonger la durée de vie des batteries.</p>
-        <a href="contact.html" class="btn btn--accent">Contactez-nous <span class="btn-arrow">&#8594;</span></a>
+        <h2>Découvrez le coût réel de la transition de votre flotte.</h2>
+        <p>Apportez un trajet, un dépôt ou l'ensemble de votre réseau. En 30 minutes, nous vous montrons ce que donne une planification fondée sur des données réelles.</p>
+        <a href="contact.html" class="btn btn--accent">Réserver une démo <span class="btn-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
@@ -194,7 +216,8 @@
       <div class="footer-grid">
         <div>
           <h4>Abonnez-vous à notre infolettre</h4>
-          <form class="newsletter-form" action="https://formsubmit.co/jonatas.manzolli@nextdriv.com" method="POST">
+          <p class="footer-tagline">Des nouvelles occasionnelles et pratiques sur l'électrification des flottes. Pas de pourriel.</p>
+          <form class="newsletter-form" action="https://formsubmit.co/jonatas.manzolli@nextdriv.ca" method="POST">
             <input type="hidden" name="_subject" value="Infolettre — nextdriv.ca (FR)">
             <input type="hidden" name="_next" value="https://nextdriv.ca/thanks.html">
             <input type="email" name="email" placeholder="Courriel" required>
@@ -213,13 +236,13 @@
         <div>
           <h4>Réseaux sociaux</h4>
           <ul>
-            <li><a href="https://www.linkedin.com/company/imats-lab/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/jmanzolli" target="_blank" rel="noopener">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/jmanzolli/" target="_blank" rel="noopener">LinkedIn</a></li>
+            
           </ul>
         </div>
         <div>
           <h4>Contact</h4>
-          <p><a href="mailto:jonatas.manzolli@nextdriv.com">jonatas.manzolli@nextdriv.com</a></p>
+          <p><a href="mailto:jonatas.manzolli@nextdriv.ca">jonatas.manzolli@nextdriv.ca</a></p>
           <p style="margin-top:16px;">Bâtiment d'ingénierie Macdonald<br>817, rue Sherbrooke Ouest<br>Montréal, QC H3A 0C3</p>
         </div>
       </div>
