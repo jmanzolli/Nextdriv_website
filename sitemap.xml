@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nextdriv.ca/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/contact.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/contact.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/about.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/fr/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/about.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/index.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/fr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/index.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/solutions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/solutions.html"/>
+  </url>
+  <url>
+    <loc>https://nextdriv.ca/fr/solutions.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/solutions.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/solutions.html"/>
+  </url>
+</urlset>

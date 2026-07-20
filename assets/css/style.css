@@ -260,6 +260,85 @@ section { padding: 100px 0; }
 
 .stat-src a { color: var(--accent); font-weight: 600; }
 
+/* ---------- Icon chips ---------- */
+.icon-chip {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: rgba(26, 77, 255, 0.14);
+  border: 1px solid rgba(26, 77, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-chip svg {
+  width: 24px;
+  height: 24px;
+  stroke: #5f83ff;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.panel .icon-chip { background: rgba(26, 77, 255, 0.08); }
+.panel .icon-chip svg { stroke: var(--accent); }
+
+.stat .icon-chip { margin-bottom: 20px; }
+.feature .icon-chip { margin-bottom: 18px; }
+.tile .icon-chip { margin-bottom: 18px; }
+
+/* ---------- Team role tags ---------- */
+.member .role {
+  margin-top: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #5f83ff;
+}
+
+.member .role + h3 { margin-top: 6px; }
+
+/* ---------- FAQ ---------- */
+.faq { margin-top: 56px; border-top: 1px solid rgba(255, 255, 255, 0.14); }
+
+.faq details { border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 24px 40px 24px 0;
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 400;
+  color: #5f83ff;
+  transition: transform 0.2s ease;
+}
+
+.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+
+.faq details p {
+  margin: 0 0 24px;
+  color: var(--text-dim);
+  max-width: 780px;
+  font-size: 16px;
+}
+
 /* ---------- Module feature lists ---------- */
 .feature-list {
   list-style: none;
