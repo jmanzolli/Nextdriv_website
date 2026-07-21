@@ -69,15 +69,24 @@ document.querySelectorAll('[data-count]').forEach((el) => countObserver.observe(
 document.querySelectorAll('[data-slideshow]').forEach((box) => {
   const slides = Array.from(box.querySelectorAll('.slide'));
   if (slides.length < 2) return;
-  const dotsWrap = box.closest('.container').querySelector('.slide-dots');
+  const root = box.closest('.container');
+  const dotsWrap = root.querySelector('.slide-dots');
+  const caption = root.querySelector('.slide-caption');
   let current = 0;
   let timer = null;
+
+  const setCaption = (slide) => {
+    if (!caption) return;
+    caption.innerHTML =
+      '<span class="cap-num">' + slide.dataset.num + '</span><strong>' +
+      slide.dataset.title + '</strong> &mdash; ' + slide.dataset.desc;
+  };
 
   const dots = slides.map((slide, k) => {
     const b = document.createElement('button');
     b.type = 'button';
     b.setAttribute('role', 'tab');
-    b.setAttribute('aria-label', (slide.alt || 'Slide ' + (k + 1)).slice(0, 60));
+    b.setAttribute('aria-label', (slide.dataset.title || 'Slide ' + (k + 1)).slice(0, 60));
     if (k === 0) b.classList.add('active');
     b.addEventListener('click', () => {
       show(k);
@@ -93,12 +102,32 @@ document.querySelectorAll('[data-slideshow]').forEach((box) => {
     current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
     dots[current].classList.add('active');
+    setCaption(slides[current]);
   };
 
   const restart = () => {
     if (timer) clearInterval(timer);
-    if (!reduceMotion) timer = setInterval(() => show(current + 1), 4500);
+    if (!reduceMotion) timer = setInterval(() => show(current + 1), 5000);
   };
 
+  setCaption(slides[0]);
   restart();
+});
+
+// Laptop opens as it scrolls into view
+document.querySelectorAll('.laptop').forEach((laptop) => {
+  if (reduceMotion) return;
+  laptop.classList.add('closed');
+  const opener = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          laptop.classList.remove('closed');
+          opener.unobserve(laptop);
+        }
+      });
+    },
+    { threshold: 0.45 }
+  );
+  opener.observe(laptop);
 });
