@@ -291,30 +291,30 @@ summary:focus-visible {
 .trust-item p { margin: 4px 0 0; font-size: 13.5px; color: var(--text-dim); line-height: 1.5; }
 
 /* ---------- Logo strip ---------- */
-.logo-strip { padding: 64px 0; }
+.logo-strip { padding: 64px 0; border-top: 1px solid rgba(255, 255, 255, 0.07); border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
 
-.logo-row {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.logo-chip {
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px 32px;
+.partner-logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 78px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  gap: clamp(28px, 5vw, 72px);
+  flex-wrap: wrap;
 }
 
-.logo-chip:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); }
+.partner-logo {
+  width: auto;
+  max-width: 210px;
+  max-height: 48px;
+  object-fit: contain;
+  opacity: 0.78;
+  transition: opacity 0.2s ease;
+}
 
-.logo-chip img { height: 42px; width: auto; max-width: 170px; object-fit: contain; }
+.partner-logo:hover { opacity: 1; }
+
+.partner-logo--engine { max-height: 58px; }
+
+.partner-logo--v1 { max-height: 54px; }
 
 /* ---------- Laptop mockup + slideshow ---------- */
 .laptop { max-width: 880px; margin: 48px auto 0; }
