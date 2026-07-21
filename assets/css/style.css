@@ -28,7 +28,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -206,6 +206,133 @@ summary:focus-visible {
   font-size: 14.5px !important;
   color: #9aa3b2 !important;
   letter-spacing: 0.01em;
+}
+
+/* ---------- Product hero ---------- */
+.hero--product {
+  min-height: auto;
+  padding: calc(var(--nav-h) + 80px) 0 90px;
+  background:
+    radial-gradient(1100px 500px at 85% 0%, rgba(26, 77, 255, 0.13), transparent 65%),
+    linear-gradient(rgba(95, 131, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 131, 255, 0.045) 1px, transparent 1px),
+    var(--bg);
+  background-size: auto, 44px 44px, 44px 44px, auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.shot {
+  border: 1px solid rgba(95, 131, 255, 0.3);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0b0d12;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.shot img { width: 100%; display: block; }
+
+.shot-stack { position: relative; }
+
+.shot-stack .shot--back {
+  width: 82%;
+  margin-left: auto;
+}
+
+.shot-stack .shot--front {
+  width: 62%;
+  position: absolute;
+  left: 0;
+  bottom: -36px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+.shot-caption {
+  margin-top: 56px;
+  font-size: 12.5px;
+  color: #8b95a7;
+  text-align: right;
+}
+
+.module-shot { margin-top: 24px; }
+
+.module-shot .shot-caption { margin-top: 10px; text-align: left; }
+
+/* ---------- Trust strip ---------- */
+.trust-strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 34px 0;
+}
+
+.trust-strip .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.trust-item { max-width: 250px; }
+
+.trust-item .t-num {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.trust-item .t-num .t-accent { color: #5f83ff; }
+
+.trust-item p { margin: 4px 0 0; font-size: 13.5px; color: var(--text-dim); line-height: 1.5; }
+
+/* ---------- Case study ---------- */
+.cs-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.cs-tag {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #7d9aff;
+  border: 1px solid rgba(95, 131, 255, 0.35);
+  border-radius: 999px;
+  padding: 5px 14px;
+}
+
+.cs-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 44px;
+}
+
+.cs-stat { border-top: 2px solid var(--accent); padding-top: 14px; }
+
+.cs-stat .n { font-size: 30px; font-weight: 800; color: #fff; font-variant-numeric: tabular-nums; }
+
+.cs-stat p { margin: 4px 0 0; font-size: 13.5px; color: var(--text-dim); line-height: 1.5; }
+
+.metric-foot {
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.metric-foot a { color: #7d9aff; font-weight: 600; }
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .shot-stack .shot--front { position: static; width: 82%; margin-top: -30px; }
+  .shot-caption { margin-top: 16px; text-align: left; }
+  .cs-stats { grid-template-columns: 1fr 1fr; }
 }
 
 /* ---------- Sections ---------- */
