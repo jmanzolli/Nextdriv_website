@@ -97,20 +97,63 @@ document.querySelectorAll('[data-slideshow]').forEach((box) => {
   });
 
   const show = (n) => {
-    slides[current].classList.remove('active');
+    const prev = slides[current];
+    prev.classList.remove('active');
     dots[current].classList.remove('active');
+    if (prev.tagName === 'VIDEO') prev.pause();
     current = (n + slides.length) % slides.length;
-    slides[current].classList.add('active');
+    const cur = slides[current];
+    cur.classList.add('active');
     dots[current].classList.add('active');
-    setCaption(slides[current]);
+    if (cur.tagName === 'VIDEO' && !reduceMotion) {
+      cur.currentTime = 0;
+      cur.play().catch(() => {});
+    }
+    setCaption(cur);
   };
 
   const restart = () => {
-    if (timer) clearInterval(timer);
-    if (!reduceMotion) timer = setInterval(() => show(current + 1), 5000);
+    if (timer) clearTimeout(timer);
+    if (reduceMotion) return;
+    const cur = slides[current];
+    if (cur.tagName !== 'VIDEO') {
+      timer = setTimeout(() => {
+        show(current + 1);
+        restart();
+      }, 5000);
+    } else {
+      // video advances on 'ended'; safety timer covers blocked autoplay
+      const ms = (isFinite(cur.duration) && cur.duration > 0 ? cur.duration : 36) * 1000 + 5000;
+      timer = setTimeout(() => {
+        show(current + 1);
+        restart();
+      }, ms);
+    }
   };
 
+  slides.forEach((s) => {
+    if (s.tagName === 'VIDEO') {
+      s.addEventListener('ended', () => {
+        if (slides[current] === s) {
+          show(current + 1);
+          restart();
+        }
+      });
+    }
+  });
+
   setCaption(slides[0]);
+  if (slides[0].tagName === 'VIDEO' && !reduceMotion) slides[0].play().catch(() => {});
+  // retry playback when the slideshow becomes visible (autoplay may be deferred)
+  const visObserver = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      const cur = slides[current];
+      if (e.isIntersecting && cur.tagName === 'VIDEO' && cur.paused && !reduceMotion) {
+        cur.play().catch(() => {});
+      }
+    });
+  }, { threshold: 0.3 });
+  visObserver.observe(box);
   restart();
 });
 
