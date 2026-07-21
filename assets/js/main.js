@@ -64,3 +64,41 @@ const countObserver = new IntersectionObserver(
   { threshold: 0.5 }
 );
 document.querySelectorAll('[data-count]').forEach((el) => countObserver.observe(el));
+
+// Screenshot slideshow (laptop mockup)
+document.querySelectorAll('[data-slideshow]').forEach((box) => {
+  const slides = Array.from(box.querySelectorAll('.slide'));
+  if (slides.length < 2) return;
+  const dotsWrap = box.closest('.container').querySelector('.slide-dots');
+  let current = 0;
+  let timer = null;
+
+  const dots = slides.map((slide, k) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', (slide.alt || 'Slide ' + (k + 1)).slice(0, 60));
+    if (k === 0) b.classList.add('active');
+    b.addEventListener('click', () => {
+      show(k);
+      restart();
+    });
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  const show = (n) => {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  };
+
+  const restart = () => {
+    if (timer) clearInterval(timer);
+    if (!reduceMotion) timer = setInterval(() => show(current + 1), 4500);
+  };
+
+  restart();
+});

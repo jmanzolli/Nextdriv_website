@@ -47,35 +47,32 @@
     </div>
   </nav>
 
-  <header class="hero hero--product">
-    <div class="container hero-grid">
+  <header class="hero">
+    <div class="hero-bg"><img src="assets/img/hero-home.jpg" alt=""></div>
+    <div class="container">
       <div class="hero-content">
         <h1>Electrify your fleet without the guesswork</h1>
-        <p style="margin-top:0;">Nextdriv is decision-support software for transit agencies, municipalities, and fleet operators. Simulate your real routes, right-size vehicles and chargers, and optimize daily charging using your operational data.</p>
+        <p style="margin-top:0;">Nextdriv is decision-support software for transit agencies, municipalities, and fleet operators. Simulate your real routes, right-size vehicles and chargers, and cut daily charging costs&mdash;before and after you commit capital.</p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:36px;">
-          <a href="contact.html" class="btn btn--accent">Request a fleet assessment <span class="btn-arrow">&#8594;</span></a>
+          <a href="contact.html" class="btn">Request a fleet assessment <span class="btn-arrow">&#8594;</span></a>
           <a href="#overview" class="btn btn--dark" style="border:1px solid rgba(255,255,255,0.35);">Watch the 2-minute overview <span class="btn-arrow">&#9654;</span></a>
         </div>
-        <p class="hero-trust">A McGill University spin-off &middot; Methods published in Applied&nbsp;Energy, Energy, and IEEE&nbsp;Access</p>
-      </div>
-      <div>
-        <div class="shot-stack">
-          <div class="shot shot--back"><img src="assets/img/platform/depot-load-curve.webp" alt="Electric-fleet power profile across the operating day, with peak-demand and average-power indicators." width="1920" height="1080"></div>
-          <div class="shot shot--front"><img src="assets/img/platform/planning-tco.webp" alt="Long-term fleet electrification plan showing cost projections, capital expenditure, operating costs, deployment timing, payback, and lifetime savings." width="2048" height="1155"></div>
-        </div>
-        <p class="shot-caption">Illustrative platform interface using demonstration data.</p>
+        <p class="hero-trust">A McGill University spin-off &middot; Methods published in IEEE&nbsp;Access, Energy, and Applied&nbsp;Energy</p>
       </div>
     </div>
   </header>
 
-  <div class="trust-strip">
+  <section class="logo-strip reveal">
     <div class="container">
-      <div class="trust-item"><div class="t-num">103</div><p>Fleet-stakeholder interviews behind the product</p></div>
-      <div class="trust-item"><div class="t-num">52 <span class="t-accent">/</span> 1,947</div><p>Bus lines and trips evaluated in a cold-climate case study</p></div>
-      <div class="trust-item"><div class="t-num">4<span class="t-accent">+</span></div><p>Peer-reviewed methods in Applied Energy, Energy, and IEEE Access</p></div>
-      <div class="trust-item"><div class="t-num">5</div><p>Supporting programs incl. McGill Engine, Lab2Market, V1 Studio, and Sylff</p></div>
+      <p class="kicker" style="text-align:center;margin-bottom:30px;">Supported by programs and institutions including</p>
+      <div class="logo-row">
+        <div class="logo-chip"><img src="assets/img/logos/mcgill.webp" alt="McGill University" loading="lazy"></div>
+        <div class="logo-chip"><img src="assets/img/logos/mcgill-engine.jpg" alt="McGill Engine Centre" loading="lazy"></div>
+        <div class="logo-chip"><img src="assets/img/logos/lab2market.webp" alt="Lab2Market" loading="lazy"></div>
+        <div class="logo-chip"><img src="assets/img/logos/v1-studio.webp" alt="V1 Studio" loading="lazy"></div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <section class="reveal" id="overview">
     <div class="container">
@@ -101,29 +98,26 @@
         </div>
         <div class="metrics">
           <div class="metric">
-            <div class="metric-label"><span>Operating costs</span><span class="src-tag">Applied Energy 2025</span></div>
-            <div class="metric-number"><span class="sign">&minus;</span><span data-count="37">37</span><span class="unit">%</span></div>
-            <p class="metric-desc">Modeled daily operating costs, coordinated charging vs. business-as-usual in a real-data 10-bus case.</p>
+            <div class="metric-label"><span>Charging costs</span><span class="src-tag">Applied Energy</span></div>
+            <div class="metric-number"><span class="sign">&minus;</span><span data-count="30">30</span><span class="unit">%</span></div>
+            <p class="metric-desc">Up to 30% lower energy spend with optimized charging schedules.</p>
             <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gdownen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f83ff" stop-opacity="0.25"/><stop offset="1" stop-color="#5f83ff" stop-opacity="0"/></linearGradient></defs><path d="M2 8 C 30 10, 50 22, 70 27 S 105 37, 116 39 L 116 46 L 2 46 Z" fill="url(#gdownen)"/><path d="M2 8 C 30 10, 50 22, 70 27 S 105 37, 116 39" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="116" cy="39" r="3" fill="#5f83ff"/></svg></div>
-            <p class="metric-foot"><a href="#case-study">View the case conditions &rarr;</a></p>
           </div>
           <div class="metric">
-            <div class="metric-label"><span>Winter energy demand</span><span class="src-tag">Applied Energy 2026</span></div>
-            <div class="metric-number"><span class="sign">+</span><span data-count="30">30</span><span class="unit">%</span></div>
-            <p class="metric-desc">Winter conditions raised modeled fleet energy demand &mdash; changing vehicle and charger requirements.</p>
+            <div class="metric-label"><span>Peak demand</span><span class="src-tag">Energy</span></div>
+            <div class="metric-number"><span class="sign">&minus;</span><span data-count="500">500</span><span class="unit">kW</span></div>
+            <p class="metric-desc">Avoided on a simulated transit depot through coordinated charging.</p>
+            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><path d="M2 38 C 25 36, 35 8, 52 6 C 69 8, 80 36, 116 38" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.8" stroke-dasharray="4 4"/><path d="M2 38 C 22 36, 30 20, 44 19 L 76 19 C 92 21, 102 36, 116 38" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="60" cy="19" r="3" fill="#5f83ff"/></svg></div>
+          </div>
+          <div class="metric">
+            <div class="metric-label"><span>Battery life</span><span class="src-tag">IEEE Access</span></div>
+            <div class="metric-number"><span class="sign">+</span><span data-count="4">4</span><span class="unit">yrs</span></div>
+            <p class="metric-desc">Added service life with degradation-aware charging strategies.</p>
             <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gupen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f83ff" stop-opacity="0.25"/><stop offset="1" stop-color="#5f83ff" stop-opacity="0"/></linearGradient></defs><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6 L 116 46 L 2 46 Z" fill="url(#gupen)"/><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="116" cy="6" r="3" fill="#5f83ff"/></svg></div>
-            <p class="metric-foot"><a href="#case-study">View the case conditions &rarr;</a></p>
-          </div>
-          <div class="metric">
-            <div class="metric-label"><span>10-year TCO</span><span class="src-tag">Applied Energy 2026</span></div>
-            <div class="metric-number"><span class="sign">&minus;</span><span data-count="7">7</span><span class="unit">%</span></div>
-            <p class="metric-desc">Slow charging beat fast charging on modeled 10-year total cost of ownership in the Quebec City case.</p>
-            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 L 40 14 L 40 22 L 78 22 L 78 30 L 116 30" fill="none" stroke="#5f83ff" stroke-width="2"/><path d="M2 10 L 40 10 L 40 16 L 78 16 L 78 20 L 116 20" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.8" stroke-dasharray="4 4"/><circle cx="116" cy="30" r="3" fill="#5f83ff"/></svg></div>
-            <p class="metric-foot"><a href="#case-study">View the case conditions &rarr;</a></p>
           </div>
         </div>
         <div class="console-src">
-          <span style="max-width:860px;">Results are derived from peer-reviewed simulation and optimization studies using real operational data. Outcomes depend on fleet, tariff, infrastructure, weather, and service conditions and do not represent guaranteed customer savings.</span>
+          <span>From peer-reviewed simulation studies on real electric bus fleet data.</span>
           <a href="about.html">Read the research &rarr;</a>
         </div>
       </div>
@@ -131,24 +125,6 @@
   </section>
 
 
-  <section class="reveal" id="case-study">
-    <div class="container">
-      <div class="panel">
-        <p class="kicker">Case Study &middot; Cold-Climate Fleet Planning</p>
-        <h2 class="section-title">Winter changes the fleet plan.</h2>
-        <p class="section-sub">A Quebec City case study integrated agent-based traffic simulation, physics-based energy modeling, and charging optimization across 52 bus lines and 1,947 evaluated trips. Fast charging reduced upfront investment but created power peaks of approximately 20&nbsp;MW; slow charging reduced modeled 10-year TCO by 7% and supported smoother grid integration.</p>
-        <div class="cs-stats">
-          <div class="cs-stat"><div class="n">+30%</div><p>Winter increase in modeled energy demand</p></div>
-          <div class="cs-stat"><div class="n">+4%</div><p>Larger fleet required for winter reliability</p></div>
-          <div class="cs-stat"><div class="n">+35%</div><p>More chargers required in cold conditions</p></div>
-          <div class="cs-stat"><div class="n">&minus;7%</div><p>10-year TCO with slow charging vs. fast</p></div>
-        </div>
-        <div class="cs-tags">
-          <span class="cs-tag">52 lines</span><span class="cs-tag">1,947 trips</span><span class="cs-tag">Mild &amp; winter scenarios</span><span class="cs-tag">Fast &amp; slow charging</span><span class="cs-tag">Applied Energy (2026) &middot; DOI 10.1016/j.apenergy.2026.127735</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section class="reveal">
     <div class="container">
@@ -165,8 +141,7 @@
             <li>Fleet mix, battery sizing, and vehicle requirements</li>
             <li>Depot layout, charger count, and grid capacity</li>
             <li>Total cost of ownership under real operating conditions</li>
-          </ul>
-          <div class="module-shot"><div class="shot"><img src="assets/img/platform/planning-tco.webp" alt="Long-term fleet electrification plan showing cost projections, capital expenditure, operating costs, deployment timing, payback, and lifetime savings." loading="lazy" width="2048" height="1155"></div><p class="shot-caption">Illustrative platform interface using demonstration data.</p></div>
+          </ul><p class="shot-caption">Illustrative platform interface using demonstration data.</p></div>
         </div>
         <div class="feature">
           <div class="feature-num">Module 02</div>
@@ -177,8 +152,7 @@
             <li>Smart charging schedules that cut energy bills</li>
             <li>Peak-demand reduction and energy-market participation</li>
             <li>Degradation-aware strategies that extend battery life</li>
-          </ul>
-          <div class="module-shot"><div class="shot"><img src="assets/img/platform/route-map.webp" alt="Map of a demonstration transit network with active bus routes, vehicle locations, charging status, and a daily replay timeline." loading="lazy" width="1735" height="865"></div><p class="shot-caption">Illustrative platform interface using demonstration data.</p></div>
+          </ul><p class="shot-caption">Illustrative platform interface using demonstration data.</p></div>
         </div>
       </div>
     </div>
