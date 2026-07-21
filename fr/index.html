@@ -24,7 +24,7 @@
   <meta property="og:locale" content="fr_CA">
   <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="home">
 
   <nav class="nav">
     <div class="container nav-inner">
@@ -48,7 +48,10 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-bg"><img src="../assets/img/hero-home.jpg" alt=""></div>
+    <div class="hero-bg"><picture>
+      <source media="(max-width: 680px)" srcset="../assets/img/hero-home-mobile.jpg">
+      <img src="../assets/img/hero-home.jpg" alt="" width="6000" height="4000" fetchpriority="high">
+    </picture></div>
     <div class="container">
       <div class="hero-content">
         <h1>Électrifiez votre flotte sans improviser</h1>
@@ -62,9 +65,16 @@
     </div>
   </header>
 
+  <section class="mobile-shot">
+    <div class="container">
+      <div class="shot"><img src="../assets/img/platform/planning-mobile.jpg" alt="Vue de planification : projection des coûts, répartition du CAPEX, OPEX quotidien et seuil de rentabilité." width="900" height="675" loading="lazy" decoding="async"></div>
+      <p class="shot-caption" style="text-align:left;">Modélisez trajets, besoins de flotte, infrastructures et coût du cycle de vie dans un seul environnement de planification.</p>
+    </div>
+  </section>
+
   <section class="logo-strip reveal">
     <div class="container">
-      <p class="kicker" style="text-align:center;margin-bottom:30px;">Soutenu par des programmes et des institutions, dont</p>
+      <p class="kicker" style="text-align:center;margin-bottom:30px;"><span class="lg-long">Soutenu par des programmes et des institutions, dont</span><span class="lg-short">Soutenu par</span></p>
       <div class="partner-logos">
         <a class="partner-link" href="https://www.mcgill.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/mcgill-university_light_transparent_web.png" alt="McGill University"></a>
         <a class="partner-link" href="https://www.mcgill.ca/engine/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--engine" src="../assets/img/partners/mcgill-engine_light_transparent_web.png" alt="McGill Engine Centre"></a>
@@ -75,19 +85,19 @@
     </div>
   </section>
 
-  <section class="reveal" id="overview">
+  <section class="reveal sec-video" id="overview">
     <div class="container">
       <p class="kicker">La plateforme</p>
       <h2 class="section-title">Découvrez Nextdriv en 2 minutes.</h2>
       <div class="demo-wrap" style="margin-top:48px;">
-        <video controls preload="metadata" poster="../assets/img/video-poster.jpg">
+        <video controls preload="none" poster="../assets/img/video-poster.jpg">
           <source src="../assets/videos/nextdriv-teaser.mp4" type="video/mp4">
         </video>
       </div>
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal sec-metrics">
     <div class="container">
       <div class="console">
         <div class="console-head">
@@ -99,26 +109,26 @@
         </div>
         <div class="metrics">
           <div class="metric">
-            <div class="metric-label"><span>Coûts de recharge</span><span class="src-tag">Applied Energy</span></div>
-            <div class="metric-number"><span class="sign">&minus;</span><span data-count="30">30</span><span class="unit">%</span></div>
-            <p class="metric-desc">Jusqu'à 30 % de dépenses d'énergie en moins grâce aux horaires de recharge optimisés.</p>
+            <div class="metric-label"><span>Coûts d'exploitation</span><span class="src-tag">Applied Energy 2025</span></div>
+            <div class="metric-number"><span class="sign">&minus;</span><span data-count="37">37</span><span class="unit">%</span></div>
+            <p class="metric-desc">Coûts quotidiens modélisés : recharge coordonnée vs recharge non pilotée, cas réel de 10 bus.</p>
             <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gdownfr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f83ff" stop-opacity="0.25"/><stop offset="1" stop-color="#5f83ff" stop-opacity="0"/></linearGradient></defs><path d="M2 8 C 30 10, 50 22, 70 27 S 105 37, 116 39 L 116 46 L 2 46 Z" fill="url(#gdownfr)"/><path d="M2 8 C 30 10, 50 22, 70 27 S 105 37, 116 39" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="116" cy="39" r="3" fill="#5f83ff"/></svg></div>
           </div>
           <div class="metric">
-            <div class="metric-label"><span>Pic de puissance</span><span class="src-tag">Energy</span></div>
-            <div class="metric-number"><span class="sign">&minus;</span><span data-count="500">500</span><span class="unit">kW</span></div>
-            <p class="metric-desc">Évité sur un dépôt de transport simulé grâce à la recharge coordonnée.</p>
-            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><path d="M2 38 C 25 36, 35 8, 52 6 C 69 8, 80 36, 116 38" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.8" stroke-dasharray="4 4"/><path d="M2 38 C 22 36, 30 20, 44 19 L 76 19 C 92 21, 102 36, 116 38" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="60" cy="19" r="3" fill="#5f83ff"/></svg></div>
+            <div class="metric-label"><span>Demande hivernale</span><span class="src-tag">Applied Energy 2026</span></div>
+            <div class="metric-number"><span class="sign">+</span><span data-count="30">30</span><span class="unit">%</span></div>
+            <p class="metric-desc">L'hiver augmente la demande énergétique modélisée &mdash; changeant les besoins en véhicules et en bornes.</p>
+            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gupfr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f83ff" stop-opacity="0.25"/><stop offset="1" stop-color="#5f83ff" stop-opacity="0"/></linearGradient></defs><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6 L 116 46 L 2 46 Z" fill="url(#gupfr)"/><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="116" cy="6" r="3" fill="#5f83ff"/></svg></div>
           </div>
           <div class="metric">
-            <div class="metric-label"><span>Vie des batteries</span><span class="src-tag">IEEE Access</span></div>
-            <div class="metric-number"><span class="sign">+</span><span data-count="4">4</span><span class="unit">ans</span></div>
-            <p class="metric-desc">De durée de vie ajoutée grâce aux stratégies tenant compte de la dégradation.</p>
-            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gupfr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f83ff" stop-opacity="0.25"/><stop offset="1" stop-color="#5f83ff" stop-opacity="0"/></linearGradient></defs><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6 L 116 46 L 2 46 Z" fill="url(#gupfr)"/><path d="M2 39 C 30 37, 60 25, 85 15 S 110 8, 116 6" fill="none" stroke="#5f83ff" stroke-width="2"/><circle cx="116" cy="6" r="3" fill="#5f83ff"/></svg></div>
+            <div class="metric-label"><span>TCO sur 10 ans</span><span class="src-tag">Applied Energy 2026</span></div>
+            <div class="metric-number"><span class="sign">&minus;</span><span data-count="7">7</span><span class="unit">%</span></div>
+            <p class="metric-desc">La recharge lente bat la recharge rapide sur le coût total de possession modélisé (cas de Québec).</p>
+            <div class="metric-spark"><svg viewBox="0 0 120 46" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 L 40 14 L 40 22 L 78 22 L 78 30 L 116 30" fill="none" stroke="#5f83ff" stroke-width="2"/><path d="M2 10 L 40 10 L 40 16 L 78 16 L 78 20 L 116 20" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.8" stroke-dasharray="4 4"/><circle cx="116" cy="30" r="3" fill="#5f83ff"/></svg></div>
           </div>
         </div>
         <div class="console-src">
-          <span>Issus d'études de simulation évaluées par des pairs, sur des données réelles de flottes de bus électriques.</span>
+          <span style="max-width:860px;">Résultats issus d'études de cas évaluées par des pairs. Les résultats dépendent de la flotte, du climat, des tarifs, des infrastructures et des conditions d'exploitation.</span>
           <a href="about.html">Consulter les publications &rarr;</a>
         </div>
       </div>
@@ -127,7 +137,7 @@
 
 
 
-  <section class="reveal">
+  <section class="reveal sec-modules">
     <div class="container">
       <p class="kicker">Ce que fait Nextdriv</p>
       <h2 class="section-title">Une seule plateforme, du premier plan à la recharge quotidienne.</h2>
@@ -162,9 +172,22 @@
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="mobile-compact">
+    <div class="container">
+      <p class="kicker">Pourquoi Nextdriv</p>
+      <ul class="feature-list">
+        <li>Des preuves avant l'appel d'offres</li>
+        <li>Une plateforme, de la planification aux opérations</li>
+        <li>Des modèles évalués par des pairs et explicables</li>
+      </ul>
+      <p class="section-sub" style="margin-top:22px;font-size:15.5px;">Conçu pour les sociétés de transport, les municipalités, les flottes logistiques, les ports, les services publics et les partenaires en électrification.</p>
+    </div>
+  </section>
+
+
+  <section class="reveal sec-about">
     <div class="container split">
-      <div class="split-img"><img src="../assets/img/bus-garage.jpg" alt="Flotte de bus électriques en garage"></div>
+      <div class="split-img"><img src="../assets/img/bus-garage.jpg" loading="lazy" decoding="async" width="2592" height="1727" alt="Flotte de bus électriques en garage"></div>
       <div>
         <p class="kicker">À propos de nous</p>
         <h2 class="section-title">Portée par une équipe d'ingénieurs de McGill et appuyée par des recherches évaluées par des pairs.</h2>
@@ -176,7 +199,7 @@
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal sec-why">
     <div class="container">
       <div class="panel">
         <p class="kicker">Pourquoi Nextdriv ?</p>
@@ -205,7 +228,7 @@
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal sec-who">
     <div class="container">
       <p class="kicker">Qui nous servons</p>
       <h2 class="section-title">Conçu pour les équipes qui prennent les décisions d'électrification.</h2>
@@ -238,7 +261,7 @@
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal sec-pilot">
     <div class="container split">
       <div>
         <p class="kicker">Programme pilote</p>
@@ -248,7 +271,7 @@
           <a href="pilot.html" class="btn btn--accent">Découvrir le programme pilote <span class="btn-arrow">&#8594;</span></a>
         </div>
       </div>
-      <div class="split-img"><img src="../assets/img/bus-charging.jpg" alt="Bus électrique en recharge au dépôt"></div>
+      <div class="split-img"><img src="../assets/img/bus-charging.jpg" loading="lazy" decoding="async" width="816" height="1456" alt="Bus électrique en recharge au dépôt"></div>
     </div>
   </section>
 

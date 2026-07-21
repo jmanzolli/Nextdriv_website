@@ -8,6 +8,8 @@ if (toggle && links) {
   const setOpen = (open) => {
     links.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+    toggle.innerHTML = open ? '&times;' : '&#9776;';
   };
 
   toggle.addEventListener('click', () => setOpen(!links.classList.contains('open')));
