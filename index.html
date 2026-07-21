@@ -29,18 +29,20 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo"><img src="assets/img/logo-white.png" alt="Nextdriv"></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-menu">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="solutions.html">Platform</a></li>
         <li><a href="pilot.html">Pilot Program</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta-mobile"><a href="contact.html">Request a fleet assessment</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
+        <a href="contact.html" class="nav-cta">Request a fleet assessment</a>
         <div class="nav-lang">
           <a href="index.html" class="active">EN</a><span>|</span><a href="fr/index.html">FR</a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -52,7 +54,7 @@
         <h1>Electrify your fleet without the guesswork</h1>
         <p style="margin-top:0;">Nextdriv is decision-support software for transit agencies, municipalities, and fleet operators. Simulate your real routes, right-size vehicles and chargers, and cut daily charging costs&mdash;before and after you commit capital.</p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:36px;">
-          <a href="contact.html" class="btn">Book a demo <span class="btn-arrow">&#8594;</span></a>
+          <a href="contact.html" class="btn">Request a fleet assessment <span class="btn-arrow">&#8594;</span></a>
           <a href="#overview" class="btn btn--dark" style="border:1px solid rgba(255,255,255,0.35);">Watch the 2-minute overview <span class="btn-arrow">&#9654;</span></a>
         </div>
         <p class="hero-trust">A McGill University spin-off &middot; Methods published in IEEE&nbsp;Access, Energy, and Applied&nbsp;Energy</p>
@@ -225,7 +227,7 @@
         <h2 class="section-title">Put your fleet's data to the test.</h2>
         <p class="section-sub">We're partnering with a small number of fleets on structured pilots: you share routes, schedules, and electricity tariffs &mdash; we deliver a full electrification or charging-optimization analysis of your operation, typically within 8&ndash;12 weeks. You keep the results either way.</p>
         <div style="margin-top:36px;">
-          <a href="pilot.html" class="btn btn--accent">Request a pilot proposal <span class="btn-arrow">&#8594;</span></a>
+          <a href="pilot.html" class="btn btn--accent">See the pilot program <span class="btn-arrow">&#8594;</span></a>
         </div>
       </div>
       <div class="split-img"><img src="assets/img/bus-charging.jpg" alt="Electric bus charging at a depot"></div>
@@ -237,7 +239,7 @@
       <div class="panel">
         <h2>See what your fleet's transition actually costs.</h2>
         <p>Bring one route, one depot, or your whole network. In 30 minutes we'll show you what evidence-based planning looks like on real data.</p>
-        <a href="contact.html" class="btn btn--accent">Book a demo <span class="btn-arrow">&#8594;</span></a>
+        <a href="contact.html" class="btn btn--accent">Request a fleet assessment <span class="btn-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
@@ -279,6 +281,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="security.html">Data &amp; Security</a><a href="accessibility.html">Accessibility</a></div>
         <img src="assets/img/logo-white.png" alt="Nextdriv">
         <span>&copy; 2026 by Nextdriv</span>
       </div>

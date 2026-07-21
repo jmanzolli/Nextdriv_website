@@ -29,18 +29,20 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo"><img src="../assets/img/logo-white.png" alt="Nextdriv"></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="solutions.html">Plateforme</a></li>
         <li><a href="pilot.html">Programme pilote</a></li>
         <li><a href="about.html" class="active">À propos</a></li>
         <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta-mobile"><a href="contact.html">Demander une évaluation de flotte</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
+        <a href="contact.html" class="nav-cta">Demander une évaluation de flotte</a>
         <div class="nav-lang">
           <a href="../about.html">EN</a><span>|</span><a href="about.html" class="active">FR</a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -50,7 +52,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>À propos de nous</h1>
-        <p>Nous nous engageons à révolutionner la gestion de flotte avec des solutions innovantes basées sur l'IA pour un transport durable.</p>
+        <p>Conçu par des chercheurs et des ingénieurs qui comprennent le fonctionnement réel des flottes. Nextdriv traduit trajets, horaires, tarifs, contraintes des véhicules et limites du réseau en décisions d'électrification et de recharge défendables.</p>
       </div>
     </div>
   </header>
@@ -59,12 +61,13 @@
     <div class="container">
       <p class="kicker">Notre équipe</p>
       <h2 class="section-title">Rencontrez l'équipe de McGill qui façonne l'avenir de l'électrification des flottes.</h2>
-      <div class="team-grid">
+      <p class="kicker" style="margin-top:56px;">Direction</p>
+      <div class="team-grid" style="margin-top:24px;">
         <div class="member">
           <img src="../assets/img/team-jonatas.jpg" alt="Jônatas Manzolli">
           <p class="role">Cofondateur</p>
           <h3>Jônatas Manzolli</h3>
-          <p>Jônatas Manzolli est chercheur postdoctoral à McGill, spécialisé en systèmes énergétiques durables, en optimisation, en mobilité électrique et en intelligence artificielle.</p>
+          <p>Jônatas Manzolli est ingénieur et chercheur, spécialisé en optimisation de flottes électriques, en infrastructures de recharge, en exploitation adaptée aux batteries et en systèmes transport-énergie. Ses travaux sont validés sur des données réelles de flottes et publiés dans des revues de premier plan.</p>
           <a class="li-link" href="https://www.linkedin.com/in/jmanzolli/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
         </div>
         <div class="member">
@@ -74,6 +77,9 @@
           <p>Luis Miranda-Moreno est professeur à McGill avec plus de 15 ans d'expérience en mobilité durable et en technologies de transport émergentes.</p>
           <a class="li-link" href="https://www.linkedin.com/in/luis-miranda-moreno-dr-a8793019/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
         </div>
+      </div>
+      <p class="kicker" style="margin-top:64px;">Produit et ingénierie</p>
+      <div class="team-grid" style="margin-top:24px;">
         <div class="member">
           <img src="../assets/img/team-kaan.jpg" alt="Kaan Gun">
           <p class="role">Ingénierie</p>
@@ -103,7 +109,7 @@
     <div class="container">
       <div class="panel">
         <p class="kicker">Notre mission</p>
-        <p style="font-size:clamp(20px,2.4vw,28px);font-weight:500;line-height:1.5;max-width:1000px;">Chez Nextdriv, notre mission est de permettre aux exploitants de flottes de migrer vers des systèmes de transport durables, efficaces et tournés vers l'avenir. En exploitant l'IA de pointe, l'optimisation et des solutions basées sur les données, nous cherchons à simplifier la gestion de flotte tout en maximisant les avantages environnementaux et économiques. Nous nous engageons à promouvoir l'innovation pour réduire l'empreinte carbone, améliorer l'efficacité opérationnelle et contribuer à un avenir plus vert et plus intelligent pour tous.</p>
+        <p style="font-size:clamp(20px,2.4vw,28px);font-weight:500;line-height:1.5;max-width:1000px;">Notre mission est de donner aux exploitants de flottes les preuves et les outils nécessaires pour électrifier de façon fiable, maîtriser les coûts et prendre de meilleures décisions d'infrastructure sur toute la durée de vie de leurs actifs.</p>
       </div>
     </div>
   </section>
@@ -151,7 +157,7 @@
       <div class="panel">
         <h2>Travaillez avec l'équipe derrière les modèles.</h2>
         <p>Apportez un trajet, un dépôt ou l'ensemble de votre réseau. En 30 minutes, nous vous montrons ce que donne une planification d'électrification fondée sur des données réelles.</p>
-        <a href="contact.html" class="btn btn--accent">Réserver une démo <span class="btn-arrow">&#8594;</span></a>
+        <a href="contact.html" class="btn btn--accent">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
@@ -193,6 +199,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="footer-legal"><a href="privacy.html">Confidentialité</a><a href="terms.html">Conditions</a><a href="security.html">Données et sécurité</a><a href="accessibility.html">Accessibilité</a></div>
         <img src="../assets/img/logo-white.png" alt="Nextdriv">
         <span>&copy; 2026 par Nextdriv</span>
       </div>

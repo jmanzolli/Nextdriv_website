@@ -29,18 +29,20 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo"><img src="../assets/img/logo-white.png" alt="Nextdriv"></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-menu">
         <li><a href="index.html" class="active">Accueil</a></li>
         <li><a href="solutions.html">Plateforme</a></li>
         <li><a href="pilot.html">Programme pilote</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta-mobile"><a href="contact.html">Demander une évaluation de flotte</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
+        <a href="contact.html" class="nav-cta">Demander une évaluation de flotte</a>
         <div class="nav-lang">
           <a href="../index.html">EN</a><span>|</span><a href="index.html" class="active">FR</a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -52,7 +54,7 @@
         <h1>Électrifiez votre flotte sans improviser</h1>
         <p style="margin-top:0;">Nextdriv est un logiciel d'aide à la décision pour les sociétés de transport, les municipalités et les exploitants de flottes. Simulez vos trajets réels, dimensionnez vos véhicules et vos bornes, et réduisez vos coûts de recharge quotidiens&mdash;avant et après vos investissements.</p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:36px;">
-          <a href="contact.html" class="btn">Réserver une démo <span class="btn-arrow">&#8594;</span></a>
+          <a href="contact.html" class="btn">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></a>
           <a href="#overview" class="btn btn--dark" style="border:1px solid rgba(255,255,255,0.35);">Voir l'aperçu de 2 minutes <span class="btn-arrow">&#9654;</span></a>
         </div>
         <p class="hero-trust">Une entreprise dérivée de l'Université McGill &middot; Méthodes publiées dans IEEE&nbsp;Access, Energy et Applied&nbsp;Energy</p>
@@ -225,7 +227,7 @@
         <h2 class="section-title">Mettez les données de votre flotte à l'épreuve.</h2>
         <p class="section-sub">Nous menons des projets pilotes structurés avec un nombre limité de flottes : vous partagez vos trajets, vos horaires et vos tarifs d'électricité &mdash; nous livrons une analyse complète d'électrification ou d'optimisation de la recharge de vos opérations, généralement en 8 à 12 semaines. Les résultats vous appartiennent, quoi qu'il arrive.</p>
         <div style="margin-top:36px;">
-          <a href="pilot.html" class="btn btn--accent">Demander une proposition pilote <span class="btn-arrow">&#8594;</span></a>
+          <a href="pilot.html" class="btn btn--accent">Découvrir le programme pilote <span class="btn-arrow">&#8594;</span></a>
         </div>
       </div>
       <div class="split-img"><img src="../assets/img/bus-charging.jpg" alt="Bus électrique en recharge au dépôt"></div>
@@ -237,7 +239,7 @@
       <div class="panel">
         <h2>Découvrez le coût réel de la transition de votre flotte.</h2>
         <p>Apportez un trajet, un dépôt ou l'ensemble de votre réseau. En 30 minutes, nous vous montrons ce que donne une planification fondée sur des données réelles.</p>
-        <a href="contact.html" class="btn btn--accent">Réserver une démo <span class="btn-arrow">&#8594;</span></a>
+        <a href="contact.html" class="btn btn--accent">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
@@ -279,6 +281,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="footer-legal"><a href="privacy.html">Confidentialité</a><a href="terms.html">Conditions</a><a href="security.html">Données et sécurité</a><a href="accessibility.html">Accessibilité</a></div>
         <img src="../assets/img/logo-white.png" alt="Nextdriv">
         <span>&copy; 2026 par Nextdriv</span>
       </div>

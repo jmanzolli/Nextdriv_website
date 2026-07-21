@@ -29,18 +29,20 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo"><img src="../assets/img/logo-white.png" alt="Nextdriv"></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="solutions.html" class="active">Plateforme</a></li>
         <li><a href="pilot.html">Programme pilote</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta-mobile"><a href="contact.html">Demander une évaluation de flotte</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
+        <a href="contact.html" class="nav-cta">Demander une évaluation de flotte</a>
         <div class="nav-lang">
           <a href="../solutions.html">EN</a><span>|</span><a href="solutions.html" class="active">FR</a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -69,31 +71,34 @@
   <section class="reveal">
     <div class="container">
       <p class="kicker">Capacités</p>
-      <h2 class="section-title">Des stratégies sur mesure pour chaque étape de votre parcours en VE.</h2>
+      <h2 class="section-title">Des données de flotte aux décisions défendables.</h2>
+      <p class="section-sub">Nextdriv relie la planification de l'électrification à long terme aux opérations de recharge quotidiennes, avec les mêmes trajets, véhicules, contraintes d'infrastructure et hypothèses de coûts.</p>
       <div class="features" style="margin-top:56px;">
         <div class="feature">
-          <div class="feature-num">01</div>
+          <div class="feature-num">Module 01</div>
           <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div>
-          <h3>Transition vers une flotte intelligente</h3>
-          <p>Obtenez des informations et des stratégies personnalisées pour optimiser la composition de votre flotte, minimiser les coûts et assurer une transition en douceur vers les véhicules électriques.</p>
+          <h3>Planifier</h3>
+          <p>Savoir avant d'acheter. Chaque question d'approvisionnement, répondue sur vos propres données d'exploitation.</p>
+          <ul class="feature-list">
+            <li>Compatibilité des trajets et des véhicules</li>
+            <li>Dimensionnement de la flotte et des batteries</li>
+            <li>Dimensionnement des bornes et du dépôt</li>
+            <li>Évaluation de la capacité du réseau</li>
+            <li>Coût total de possession</li>
+          </ul>
         </div>
         <div class="feature">
-          <div class="feature-num">02</div>
+          <div class="feature-num">Module 02</div>
           <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></div>
-          <h3>Gestion intelligente de la charge</h3>
-          <p>Coordonnez les horaires de charge pour réduire les coûts énergétiques et maximizer l'efficacité, en vous assurant que votre flotte est toujours prête.</p>
-        </div>
-        <div class="feature">
-          <div class="feature-num">03</div>
-          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2.5v5M15 2.5v5"/><path d="M6 7.5h12v4a6 6 0 0 1-12 0z"/><path d="M12 17.5v4"/></svg></div>
-          <h3>Gestion de l'énergie</h3>
-          <p>Réduisez vos coûts opérationnels, participez au marché de l'énergie, diminuez la pression sur le réseau et maintenez les performances des véhicules.</p>
-        </div>
-        <div class="feature">
-          <div class="feature-num">04</div>
-          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 12l3-3 2.5 2 3.5-4"/></svg></div>
-          <h3>Le contrôle à portée de main</h3>
-          <p>Surveillez la consommation d'énergie, l'état de la batterie et les mesures opérationnelles pour prendre des décisions basées sur les données pour de meilleures performances et une meilleure durabilité.</p>
+          <h3>Exploiter</h3>
+          <p>Recharger au coût réel le plus bas, chaque jour, sans compromettre le service de demain.</p>
+          <ul class="feature-list">
+            <li>Horaires de recharge quotidiens</li>
+            <li>Gestion des pics de puissance</li>
+            <li>Optimisation tarifaire</li>
+            <li>Exploitation adaptée aux batteries</li>
+            <li>Suivi opérationnel</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -133,7 +138,7 @@
       <div class="panel">
         <h2>Voyez-le sur votre propre flotte.</h2>
         <p>Nous menons des projets pilotes structurés avec un nombre limité de flottes : partagez vos trajets, vos horaires et vos tarifs &mdash; recevez une analyse complète de vos opérations en 8 à 12 semaines. Les résultats vous appartiennent, quoi qu'il arrive.</p>
-        <a href="pilot.html" class="btn btn--accent">Demander une proposition pilote <span class="btn-arrow">&#8594;</span></a>
+        <a href="pilot.html" class="btn btn--accent">Découvrir le programme pilote <span class="btn-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
@@ -175,6 +180,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="footer-legal"><a href="privacy.html">Confidentialité</a><a href="terms.html">Conditions</a><a href="security.html">Données et sécurité</a><a href="accessibility.html">Accessibilité</a></div>
         <img src="../assets/img/logo-white.png" alt="Nextdriv">
         <span>&copy; 2026 par Nextdriv</span>
       </div>

@@ -29,18 +29,20 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo"><img src="../assets/img/logo-white.png" alt="Nextdriv"></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="solutions.html">Plateforme</a></li>
         <li><a href="pilot.html" class="active">Programme pilote</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="contact.html">Contact</a></li>
+      <li class="nav-cta-mobile"><a href="contact.html">Demander une évaluation de flotte</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
+        <a href="contact.html" class="nav-cta">Demander une évaluation de flotte</a>
         <div class="nav-lang">
           <a href="../pilot.html">EN</a><span>|</span><a href="pilot.html" class="active">FR</a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -177,7 +179,7 @@
       <div class="panel">
         <h2>Apportez un trajet, un dépôt ou l'ensemble de votre réseau.</h2>
         <p>Réservez un appel de cadrage de 30 minutes &mdash; nous vous montrons ce que donne une planification fondée sur des données réelles, puis nous envoyons une proposition de pilote.</p>
-        <a href="contact.html" class="btn btn--accent">Réserver un appel de cadrage <span class="btn-arrow">&#8594;</span></a>
+        <a href="contact.html" class="btn btn--accent">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></a>
       </div>
     </div>
   </section>
@@ -218,6 +220,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="footer-legal"><a href="privacy.html">Confidentialité</a><a href="terms.html">Conditions</a><a href="security.html">Données et sécurité</a><a href="accessibility.html">Accessibilité</a></div>
         <img src="../assets/img/logo-white.png" alt="Nextdriv">
         <span>&copy; 2026 par Nextdriv</span>
       </div>

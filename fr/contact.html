@@ -29,18 +29,20 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo"><img src="../assets/img/logo-white.png" alt="Nextdriv"></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-menu">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="solutions.html">Plateforme</a></li>
         <li><a href="pilot.html">Programme pilote</a></li>
         <li><a href="about.html">À propos</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
+      <li class="nav-cta-mobile"><a href="contact.html">Demander une évaluation de flotte</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
+        <a href="contact.html" class="nav-cta">Demander une évaluation de flotte</a>
         <div class="nav-lang">
           <a href="../contact.html">EN</a><span>|</span><a href="contact.html" class="active">FR</a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -48,42 +50,82 @@
   <section style="padding-top:calc(var(--nav-h) + 90px);">
     <div class="container contact-grid">
       <div class="contact-info">
-        <h1>Prêt à commencer ?</h1>
-        <p>Découvrez l'ère de la mobilité électrique.<br>Contactez-nous pour commencer votre parcours dès aujourd'hui.</p>
+        <h1>Dites-nous où en est votre flotte.</h1>
+        <p>Que vous évaluiez vos premiers véhicules électriques ou cherchiez à réduire vos coûts de recharge, nous identifierons le point de départ le plus utile pour vos opérations.</p>
         <div class="contact-meta">
           <p><a href="mailto:contact@nextdriv.ca">contact@nextdriv.ca</a></p>
           <p style="margin-top:16px;">Bâtiment d'ingénierie Macdonald<br>817, rue Sherbrooke Ouest<br>Montréal, QC H3A 0C3</p>
         </div>
       </div>
       <form action="https://formsubmit.co/contact@nextdriv.ca" method="POST">
-        <input type="hidden" name="_subject" value="Nouveau contact — nextdriv.ca (FR)">
+        <input type="hidden" name="_subject" value="Demande d'évaluation de flotte — nextdriv.ca (FR)">
         <input type="hidden" name="_next" value="https://nextdriv.ca/thanks.html">
         <input type="text" name="_honey" style="display:none">
         <div class="field-row">
           <div class="field">
-            <label for="fname">Prénom*</label>
-            <input type="text" id="fname" name="first_name" required>
+            <label for="name">Nom*</label>
+            <input type="text" id="name" name="name" required>
           </div>
           <div class="field">
-            <label for="lname">Nom de famille*</label>
-            <input type="text" id="lname" name="last_name" required>
+            <label for="email">Courriel professionnel*</label>
+            <input type="email" id="email" name="email" required>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="email">Courriel*</label>
-            <input type="email" id="email" name="email" required>
+            <label for="org">Organisation*</label>
+            <input type="text" id="org" name="organization" required>
           </div>
           <div class="field">
-            <label for="phone">Téléphone (facultatif)</label>
-            <input type="tel" id="phone" name="phone">
+            <label for="ftype">Type de flotte*</label>
+            <select id="ftype" name="fleet_type" required>
+              <option value="" selected disabled>Choisir&hellip;</option>
+              <option>Transport collectif</option>
+              <option>Municipal</option>
+              <option>Logistique / fret</option>
+              <option>Portuaire</option>
+              <option>Service public</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fsize">Taille de la flotte</label>
+            <select id="fsize" name="fleet_size">
+              <option value="" selected disabled>Choisir&hellip;</option>
+              <option>Moins de 10 véhicules</option>
+              <option>10 à 50 véhicules</option>
+              <option>50 à 200 véhicules</option>
+              <option>200 véhicules et plus</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stage">Étape actuelle*</label>
+            <select id="stage" name="stage" required>
+              <option value="" selected disabled>Choisir&hellip;</option>
+              <option>Planification de l'électrification</option>
+              <option>Exploitation de VE en cours</option>
+              <option>Les deux</option>
+            </select>
           </div>
         </div>
         <div class="field">
-          <label for="message">Message*</label>
-          <textarea id="message" name="message" required></textarea>
+          <label for="objective">Objectif principal*</label>
+          <select id="objective" name="objective" required>
+            <option value="" selected disabled>Choisir&hellip;</option>
+            <option>Planifier notre transition vers les VE</option>
+            <option>Réduire les coûts de recharge et d'énergie</option>
+            <option>Dimensionner bornes, dépôt ou capacité réseau</option>
+            <option>Prolonger la durée de vie des batteries</option>
+            <option>Autre</option>
+          </select>
         </div>
-        <button type="submit" class="btn btn--accent">Envoyer <span class="btn-arrow">&#8594;</span></button>
+        <div class="field">
+          <label for="message">Autre chose à nous dire&nbsp;?</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn--accent">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></button>
         <p style="margin-top:18px;font-size:14px;color:var(--text-dim);">Nous répondons dans un délai de deux jours ouvrables. Vos données opérationnelles vous appartiennent.</p>
       </form>
     </div>
@@ -126,6 +168,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="footer-legal"><a href="privacy.html">Confidentialité</a><a href="terms.html">Conditions</a><a href="security.html">Données et sécurité</a><a href="accessibility.html">Accessibilité</a></div>
         <img src="../assets/img/logo-white.png" alt="Nextdriv">
         <span>&copy; 2026 par Nextdriv</span>
       </div>

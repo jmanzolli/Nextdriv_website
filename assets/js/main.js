@@ -1,8 +1,27 @@
-// Mobile nav toggle
+// Mobile nav toggle (accessible)
 const toggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.nav-links');
 if (toggle && links) {
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  toggle.setAttribute('aria-expanded', 'false');
+  if (links.id) toggle.setAttribute('aria-controls', links.id);
+
+  const setOpen = (open) => {
+    links.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+
+  toggle.addEventListener('click', () => setOpen(!links.classList.contains('open')));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+
+  links.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => setOpen(false))
+  );
 }
 
 // Scroll reveal

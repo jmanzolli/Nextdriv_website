@@ -29,18 +29,20 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo"><img src="assets/img/logo-white.png" alt="Nextdriv"></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="site-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="solutions.html">Platform</a></li>
         <li><a href="pilot.html">Pilot Program</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
+      <li class="nav-cta-mobile"><a href="contact.html">Request a fleet assessment</a></li>
       </ul>
       <div style="display:flex;align-items:center;gap:16px;">
+        <a href="contact.html" class="nav-cta">Request a fleet assessment</a>
         <div class="nav-lang">
           <a href="contact.html" class="active">EN</a><span>|</span><a href="fr/contact.html">FR</a>
         </div>
-        <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-menu">&#9776;</button>
       </div>
     </div>
   </nav>
@@ -48,42 +50,82 @@
   <section style="padding-top:calc(var(--nav-h) + 90px);">
     <div class="container contact-grid">
       <div class="contact-info">
-        <h1>Ready to get started?</h1>
-        <p>Discover the electric mobility era.<br>Reach out to start your journey today.</p>
+        <h1>Tell us where your fleet is today.</h1>
+        <p>Whether you are evaluating your first electric vehicles or trying to reduce charging costs, we will identify the most useful starting point for your operation.</p>
         <div class="contact-meta">
           <p><a href="mailto:contact@nextdriv.ca">contact@nextdriv.ca</a></p>
           <p style="margin-top:16px;">Macdonald Engineering Building<br>817 Sherbrooke Street West<br>Montreal, QC H3A 0C3</p>
         </div>
       </div>
       <form action="https://formsubmit.co/contact@nextdriv.ca" method="POST">
-        <input type="hidden" name="_subject" value="New contact from nextdriv.ca">
+        <input type="hidden" name="_subject" value="Fleet assessment request — nextdriv.ca">
         <input type="hidden" name="_next" value="https://nextdriv.ca/thanks.html">
         <input type="text" name="_honey" style="display:none">
         <div class="field-row">
           <div class="field">
-            <label for="fname">First name*</label>
-            <input type="text" id="fname" name="first_name" required>
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required>
           </div>
           <div class="field">
-            <label for="lname">Last name*</label>
-            <input type="text" id="lname" name="last_name" required>
+            <label for="email">Work email*</label>
+            <input type="email" id="email" name="email" required>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required>
+            <label for="org">Organization*</label>
+            <input type="text" id="org" name="organization" required>
           </div>
           <div class="field">
-            <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone">
+            <label for="ftype">Fleet type*</label>
+            <select id="ftype" name="fleet_type" required>
+              <option value="" selected disabled>Select&hellip;</option>
+              <option>Transit</option>
+              <option>Municipal</option>
+              <option>Logistics / freight</option>
+              <option>Port</option>
+              <option>Utility</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fsize">Fleet size</label>
+            <select id="fsize" name="fleet_size">
+              <option value="" selected disabled>Select&hellip;</option>
+              <option>Under 10 vehicles</option>
+              <option>10&ndash;50 vehicles</option>
+              <option>50&ndash;200 vehicles</option>
+              <option>200+ vehicles</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stage">Current stage*</label>
+            <select id="stage" name="stage" required>
+              <option value="" selected disabled>Select&hellip;</option>
+              <option>Planning electrification</option>
+              <option>Already operating EVs</option>
+              <option>Both</option>
+            </select>
           </div>
         </div>
         <div class="field">
-          <label for="message">Message*</label>
-          <textarea id="message" name="message" required></textarea>
+          <label for="objective">Primary objective*</label>
+          <select id="objective" name="objective" required>
+            <option value="" selected disabled>Select&hellip;</option>
+            <option>Plan our transition to electric vehicles</option>
+            <option>Reduce charging and energy costs</option>
+            <option>Size chargers, depot, or grid capacity</option>
+            <option>Extend battery life</option>
+            <option>Other</option>
+          </select>
         </div>
-        <button type="submit" class="btn btn--accent">Send <span class="btn-arrow">&#8594;</span></button>
+        <div class="field">
+          <label for="message">Anything else we should know?</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit" class="btn btn--accent">Request a fleet assessment <span class="btn-arrow">&#8594;</span></button>
         <p style="margin-top:18px;font-size:14px;color:var(--text-dim);">We reply within two business days. Your operational data stays yours.</p>
       </form>
     </div>
@@ -126,6 +168,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="security.html">Data &amp; Security</a><a href="accessibility.html">Accessibility</a></div>
         <img src="assets/img/logo-white.png" alt="Nextdriv">
         <span>&copy; 2026 by Nextdriv</span>
       </div>
