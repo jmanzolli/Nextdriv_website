@@ -55,7 +55,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Électrifiez votre flotte sans improviser</h1>
-        <p style="margin-top:0;">Nextdriv est un logiciel d'aide à la décision pour les sociétés de transport, les municipalités et les exploitants de flottes. Simulez vos trajets réels, dimensionnez vos véhicules et vos bornes, et réduisez vos coûts de recharge quotidiens&mdash;avant et après vos investissements.</p>
+        <p style="margin-top:0;">Planifiez véhicules, bornes, capacité réseau et coûts du cycle de vie, puis optimisez la recharge quotidienne avec vos données réelles de flotte.</p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:36px;">
           <a href="contact.html" class="btn">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></a>
           <a href="#overview" class="btn btn--dark" style="border:1px solid rgba(255,255,255,0.35);">Voir l'aperçu de 2 minutes <span class="btn-arrow">&#9654;</span></a>
@@ -65,37 +65,103 @@
     </div>
   </header>
 
-  <section class="mobile-shot">
+  <section class="reveal sec-video home-video" id="overview">
     <div class="container">
-      <div class="shot"><img src="../assets/img/platform/planning-mobile.jpg" alt="Vue de planification : projection des coûts, répartition du CAPEX, OPEX quotidien et seuil de rentabilité." width="900" height="675" loading="lazy" decoding="async"></div>
-      <p class="shot-caption" style="text-align:left;">Modélisez trajets, besoins de flotte, infrastructures et coût du cycle de vie dans un seul environnement de planification.</p>
-    </div>
-  </section>
-
-  <section class="logo-strip reveal">
-    <div class="container">
-      <p class="kicker" style="text-align:center;margin-bottom:30px;"><span class="lg-long">Soutenu par des programmes et des institutions, dont</span><span class="lg-short">Soutenu par</span></p>
-      <div class="partner-logos">
-        <a class="partner-link" href="https://www.mcgill.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/mcgill-university_light_transparent_web.png" alt="McGill University"></a>
-        <a class="partner-link" href="https://www.mcgill.ca/engine/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--engine" src="../assets/img/partners/mcgill-engine_light_transparent_web.png" alt="McGill Engine Centre"></a>
-        <a class="partner-link" href="https://lab2market.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/lab2market_light_transparent_web.png" alt="Lab2Market"></a>
-        <a class="partner-link" href="https://www.v1.studio/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--v1" src="../assets/img/partners/v1-studio_light_transparent_web.png" alt="V1 Studio"></a>
-        <a class="partner-link" href="https://www.mitacs.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/mitacs_light_transparent_web.png" alt="Mitacs"></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="reveal sec-video" id="overview">
-    <div class="container">
-      <p class="kicker">La plateforme</p>
-      <h2 class="section-title">Découvrez Nextdriv en 2 minutes.</h2>
-      <div class="demo-wrap" style="margin-top:48px;">
+      <p class="kicker">Nextdriv en action</p>
+      <div class="demo-wrap">
         <video controls preload="none" poster="../assets/img/video-poster.jpg">
           <source src="../assets/videos/nextdriv-teaser.mp4" type="video/mp4">
         </video>
       </div>
     </div>
   </section>
+
+
+  <section class="partner-strip reveal" aria-label="Programmes et institutions qui soutiennent Nextdriv">
+    <p class="partner-heading">Soutenu par</p>
+    <div class="partner-marquee">
+      <div class="partner-track">
+        <div class="partner-group">
+        <a class="partner-link" href="https://www.mcgill.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/mcgill-university_light_transparent_web.png" alt="McGill University"></a>
+        <a class="partner-link" href="https://www.mcgill.ca/engine/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--engine" src="../assets/img/partners/mcgill-engine_light_transparent_web.png" alt="McGill Engine Centre"></a>
+        <a class="partner-link" href="https://lab2market.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/lab2market_light_transparent_web.png" alt="Lab2Market"></a>
+        <a class="partner-link" href="https://www.v1.studio/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--v1" src="../assets/img/partners/v1-studio_light_transparent_web.png" alt="V1 Studio"></a>
+        <a class="partner-link" href="https://www.mitacs.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/mitacs_light_transparent_web.png" alt="Mitacs"></a>
+        </div>
+        <div class="partner-group" aria-hidden="true">
+        <a class="partner-link" href="https://www.mcgill.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/mcgill-university_light_transparent_web.png" alt="McGill University"></a>
+        <a class="partner-link" href="https://www.mcgill.ca/engine/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--engine" src="../assets/img/partners/mcgill-engine_light_transparent_web.png" alt="McGill Engine Centre"></a>
+        <a class="partner-link" href="https://lab2market.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/lab2market_light_transparent_web.png" alt="Lab2Market"></a>
+        <a class="partner-link" href="https://www.v1.studio/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--v1" src="../assets/img/partners/v1-studio_light_transparent_web.png" alt="V1 Studio"></a>
+        <a class="partner-link" href="https://www.mitacs.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="../assets/img/partners/mitacs_light_transparent_web.png" alt="Mitacs"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="reveal sec-modules">
+    <div class="container">
+      <p class="kicker">Ce que fait Nextdriv</p>
+      <h2 class="section-title">Une seule plateforme, du premier plan à la recharge quotidienne.</h2>
+      <p class="section-sub">Nextdriv modélise votre flotte telle qu'elle fonctionne réellement &mdash; trajets, horaires, météo, batteries et tarifs d'électricité &mdash; puis continue d'optimiser après le déploiement. Aucune boîte noire : nos modèles sont évalués par des pairs et publiés.</p>
+      <div class="mod-mobile">
+        <div class="mod-tabs" role="tablist" aria-label="Modules de la plateforme">
+          <button type="button" class="mod-tab active" data-pane="plan" role="tab" aria-selected="true">Planifier</button>
+          <button type="button" class="mod-tab" data-pane="operate" role="tab" aria-selected="false">Exploiter</button>
+        </div>
+        <div class="mod-pane active" data-pane="plan" role="tabpanel">
+          <div class="shot"><img src="../assets/img/platform/planning-mobile.jpg" alt="Vue de planification : projection des coûts, CAPEX, OPEX, seuil de rentabilité." width="900" height="675" loading="lazy" decoding="async"></div>
+          <h3>Planifiez votre transition</h3>
+          <ul class="feature-list">
+            <li>Compatibilité des trajets et des véhicules</li>
+            <li>Besoins en bornes et en réseau</li>
+            <li>Scénarios de coût du cycle de vie</li>
+          </ul>
+          <a class="mod-link" href="solutions.html">Explorer la plateforme &rarr;</a>
+        </div>
+        <div class="mod-pane" data-pane="operate" role="tabpanel" hidden>
+          <div class="shot"><img src="../assets/img/platform/operations-mobile.jpg" alt="Vue des opérations : carte du réseau en direct, relecture et état de la flotte." width="900" height="675" loading="lazy" decoding="async"></div>
+          <h3>Exploitez votre flotte</h3>
+          <ul class="feature-list">
+            <li>Horaires de recharge quotidiens</li>
+            <li>Gestion des pics de puissance</li>
+            <li>Contraintes de service et de batteries</li>
+          </ul>
+          <a class="mod-link" href="solutions.html">Explorer la plateforme &rarr;</a>
+        </div>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-num">Module 01</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div>
+          <h3>Planifier &mdash; savoir avant d'acheter</h3>
+          <p>Testez des scénarios d'électrification sur vos propres trajets et arrivez en appel d'offres avec des preuves plutôt que des estimations.</p>
+          <ul class="feature-list">
+            <li>Composition de la flotte, dimensionnement des batteries et des véhicules</li>
+            <li>Aménagement du dépôt, nombre de bornes et capacité du réseau</li>
+            <li>Coût total de possession en conditions réelles d'exploitation</li>
+          </ul>
+        </div>
+        <div class="feature">
+          <div class="feature-num">Module 02</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></div>
+          <h3>Exploiter &mdash; recharger au coût réel le plus bas</h3>
+          <p>Planifiez la recharge de chaque véhicule selon les prix de l'énergie, les limites du réseau et le service de demain.</p>
+          <ul class="feature-list">
+            <li>Horaires de recharge intelligents qui réduisent la facture d'énergie</li>
+            <li>Réduction des pics de puissance et participation au marché de l'énergie</li>
+            <li>Stratégies tenant compte de la dégradation pour prolonger la vie des batteries</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:48px;">
+        <a href="solutions.html" class="btn">Voir comment ça marche <span class="btn-arrow">&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+
+
 
   <section class="reveal sec-metrics">
     <div class="container">
@@ -129,60 +195,12 @@
         </div>
         <div class="console-src">
           <span style="max-width:860px;">Résultats issus d'études de cas évaluées par des pairs. Les résultats dépendent de la flotte, du climat, des tarifs, des infrastructures et des conditions d'exploitation.</span>
-          <a href="about.html">Consulter les publications &rarr;</a>
+          <a href="about.html">Explorer les études de cas &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-
-
-  <section class="reveal sec-modules">
-    <div class="container">
-      <p class="kicker">Ce que fait Nextdriv</p>
-      <h2 class="section-title">Une seule plateforme, du premier plan à la recharge quotidienne.</h2>
-      <p class="section-sub">Nextdriv modélise votre flotte telle qu'elle fonctionne réellement &mdash; trajets, horaires, météo, batteries et tarifs d'électricité &mdash; puis continue d'optimiser après le déploiement. Aucune boîte noire : nos modèles sont évalués par des pairs et publiés.</p>
-      <div class="features">
-        <div class="feature">
-          <div class="feature-num">Module 01</div>
-          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div>
-          <h3>Planifier &mdash; savoir avant d'acheter</h3>
-          <p>Testez des scénarios d'électrification sur vos propres trajets et arrivez en appel d'offres avec des preuves plutôt que des estimations.</p>
-          <ul class="feature-list">
-            <li>Composition de la flotte, dimensionnement des batteries et des véhicules</li>
-            <li>Aménagement du dépôt, nombre de bornes et capacité du réseau</li>
-            <li>Coût total de possession en conditions réelles d'exploitation</li>
-          </ul>
-        </div>
-        <div class="feature">
-          <div class="feature-num">Module 02</div>
-          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></div>
-          <h3>Exploiter &mdash; recharger au coût réel le plus bas</h3>
-          <p>Planifiez la recharge de chaque véhicule selon les prix de l'énergie, les limites du réseau et le service de demain.</p>
-          <ul class="feature-list">
-            <li>Horaires de recharge intelligents qui réduisent la facture d'énergie</li>
-            <li>Réduction des pics de puissance et participation au marché de l'énergie</li>
-            <li>Stratégies tenant compte de la dégradation pour prolonger la vie des batteries</li>
-          </ul>
-        </div>
-      </div>
-      <div style="margin-top:48px;">
-        <a href="solutions.html" class="btn">Voir comment ça marche <span class="btn-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="mobile-compact">
-    <div class="container">
-      <p class="kicker">Pourquoi Nextdriv</p>
-      <ul class="feature-list">
-        <li>Des preuves avant l'appel d'offres</li>
-        <li>Une plateforme, de la planification aux opérations</li>
-        <li>Des modèles évalués par des pairs et explicables</li>
-      </ul>
-      <p class="section-sub" style="margin-top:22px;font-size:15.5px;">Conçu pour les sociétés de transport, les municipalités, les flottes logistiques, les ports, les services publics et les partenaires en électrification.</p>
-    </div>
-  </section>
 
 
   <section class="reveal sec-about">
@@ -269,6 +287,10 @@
         <p class="section-sub">Nous menons des projets pilotes structurés avec un nombre limité de flottes : vous partagez vos trajets, vos horaires et vos tarifs d'électricité &mdash; nous livrons une analyse complète d'électrification ou d'optimisation de la recharge de vos opérations, généralement en 8 à 12 semaines. Les résultats vous appartiennent, quoi qu'il arrive.</p>
         <div style="margin-top:36px;">
           <a href="pilot.html" class="btn btn--accent">Découvrir le programme pilote <span class="btn-arrow">&#8594;</span></a>
+          <div class="pilot-mobile-cta">
+            <a href="contact.html" class="btn btn--accent">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></a>
+            <p class="pilot-note">Durée typique d'un pilote&nbsp;: 8 à 12 semaines<br>Vos données et résultats vous appartiennent</p>
+          </div>
         </div>
       </div>
       <div class="split-img"><img src="../assets/img/bus-charging.jpg" loading="lazy" decoding="async" width="816" height="1456" alt="Bus électrique en recharge au dépôt"></div>

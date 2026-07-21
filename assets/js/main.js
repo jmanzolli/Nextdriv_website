@@ -184,3 +184,24 @@ document.querySelectorAll('.laptop').forEach((laptop) => {
   window.addEventListener('resize', onScroll, { passive: true });
   update();
 });
+
+
+// Plan / Operate mobile tabs
+document.querySelectorAll('.mod-mobile').forEach((box) => {
+  const tabs = box.querySelectorAll('.mod-tab');
+  const panes = box.querySelectorAll('.mod-pane');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', String(on));
+      });
+      panes.forEach((p) => {
+        const on = p.dataset.pane === tab.dataset.pane;
+        p.classList.toggle('active', on);
+        p.hidden = !on;
+      });
+    });
+  });
+});

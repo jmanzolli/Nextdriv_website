@@ -55,7 +55,7 @@
     <div class="container">
       <div class="hero-content">
         <h1>Electrify your fleet without the guesswork</h1>
-        <p style="margin-top:0;">Nextdriv is decision-support software for transit agencies, municipalities, and fleet operators. Simulate your real routes, right-size vehicles and chargers, and cut daily charging costs&mdash;before and after you commit capital.</p>
+        <p style="margin-top:0;">Plan vehicles, chargers, grid capacity, and lifecycle costs, then optimize daily charging using your real fleet data.</p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:36px;">
           <a href="contact.html" class="btn">Request a fleet assessment <span class="btn-arrow">&#8594;</span></a>
           <a href="#overview" class="btn btn--dark" style="border:1px solid rgba(255,255,255,0.35);">Watch the 2-minute overview <span class="btn-arrow">&#9654;</span></a>
@@ -65,37 +65,103 @@
     </div>
   </header>
 
-  <section class="mobile-shot">
+  <section class="reveal sec-video home-video" id="overview">
     <div class="container">
-      <div class="shot"><img src="assets/img/platform/planning-mobile.jpg" alt="Long-term planning view: cost projection, CAPEX breakdown, daily OPEX, and break-even analysis." width="900" height="675" loading="lazy" decoding="async"></div>
-      <p class="shot-caption" style="text-align:left;">Model routes, fleet requirements, infrastructure, and lifecycle cost in one planning environment.</p>
-    </div>
-  </section>
-
-  <section class="logo-strip reveal">
-    <div class="container">
-      <p class="kicker" style="text-align:center;margin-bottom:30px;"><span class="lg-long">Supported by programs and institutions including</span><span class="lg-short">Supported by</span></p>
-      <div class="partner-logos">
-        <a class="partner-link" href="https://www.mcgill.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/mcgill-university_light_transparent_web.png" alt="McGill University"></a>
-        <a class="partner-link" href="https://www.mcgill.ca/engine/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--engine" src="assets/img/partners/mcgill-engine_light_transparent_web.png" alt="McGill Engine Centre"></a>
-        <a class="partner-link" href="https://lab2market.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/lab2market_light_transparent_web.png" alt="Lab2Market"></a>
-        <a class="partner-link" href="https://www.v1.studio/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--v1" src="assets/img/partners/v1-studio_light_transparent_web.png" alt="V1 Studio"></a>
-        <a class="partner-link" href="https://www.mitacs.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/mitacs_light_transparent_web.png" alt="Mitacs"></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="reveal sec-video" id="overview">
-    <div class="container">
-      <p class="kicker">The Platform</p>
-      <h2 class="section-title">See Nextdriv in 2 minutes.</h2>
-      <div class="demo-wrap" style="margin-top:48px;">
+      <p class="kicker">See Nextdriv in action</p>
+      <div class="demo-wrap">
         <video controls preload="none" poster="assets/img/video-poster.jpg">
           <source src="assets/videos/nextdriv-teaser.mp4" type="video/mp4">
         </video>
       </div>
     </div>
   </section>
+
+
+  <section class="partner-strip reveal" aria-label="Programs and institutions supporting Nextdriv">
+    <p class="partner-heading">Supported by</p>
+    <div class="partner-marquee">
+      <div class="partner-track">
+        <div class="partner-group">
+        <a class="partner-link" href="https://www.mcgill.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/mcgill-university_light_transparent_web.png" alt="McGill University"></a>
+        <a class="partner-link" href="https://www.mcgill.ca/engine/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--engine" src="assets/img/partners/mcgill-engine_light_transparent_web.png" alt="McGill Engine Centre"></a>
+        <a class="partner-link" href="https://lab2market.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/lab2market_light_transparent_web.png" alt="Lab2Market"></a>
+        <a class="partner-link" href="https://www.v1.studio/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--v1" src="assets/img/partners/v1-studio_light_transparent_web.png" alt="V1 Studio"></a>
+        <a class="partner-link" href="https://www.mitacs.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/mitacs_light_transparent_web.png" alt="Mitacs"></a>
+        </div>
+        <div class="partner-group" aria-hidden="true">
+        <a class="partner-link" href="https://www.mcgill.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/mcgill-university_light_transparent_web.png" alt="McGill University"></a>
+        <a class="partner-link" href="https://www.mcgill.ca/engine/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--engine" src="assets/img/partners/mcgill-engine_light_transparent_web.png" alt="McGill Engine Centre"></a>
+        <a class="partner-link" href="https://lab2market.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/lab2market_light_transparent_web.png" alt="Lab2Market"></a>
+        <a class="partner-link" href="https://www.v1.studio/" target="_blank" rel="noopener"><img class="partner-logo partner-logo--v1" src="assets/img/partners/v1-studio_light_transparent_web.png" alt="V1 Studio"></a>
+        <a class="partner-link" href="https://www.mitacs.ca/" target="_blank" rel="noopener"><img class="partner-logo" src="assets/img/partners/mitacs_light_transparent_web.png" alt="Mitacs"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="reveal sec-modules">
+    <div class="container">
+      <p class="kicker">What Nextdriv Does</p>
+      <h2 class="section-title">One platform from first plan to daily charge.</h2>
+      <p class="section-sub">Nextdriv models your fleet the way it actually runs &mdash; routes, schedules, weather, batteries, and electricity tariffs &mdash; then keeps optimizing after deployment. No black boxes: our models are peer-reviewed and published.</p>
+      <div class="mod-mobile">
+        <div class="mod-tabs" role="tablist" aria-label="Platform modules">
+          <button type="button" class="mod-tab active" data-pane="plan" role="tab" aria-selected="true">Plan</button>
+          <button type="button" class="mod-tab" data-pane="operate" role="tab" aria-selected="false">Operate</button>
+        </div>
+        <div class="mod-pane active" data-pane="plan" role="tabpanel">
+          <div class="shot"><img src="assets/img/platform/planning-mobile.jpg" alt="Long-term planning view: cost projection, CAPEX, OPEX, break-even." width="900" height="675" loading="lazy" decoding="async"></div>
+          <h3>Plan your transition</h3>
+          <ul class="feature-list">
+            <li>Route and vehicle suitability</li>
+            <li>Charger and grid requirements</li>
+            <li>Lifecycle cost scenarios</li>
+          </ul>
+          <a class="mod-link" href="solutions.html">Explore the platform &rarr;</a>
+        </div>
+        <div class="mod-pane" data-pane="operate" role="tabpanel" hidden>
+          <div class="shot"><img src="assets/img/platform/operations-mobile.jpg" alt="Daily operations view: live network map, replay, and fleet status." width="900" height="675" loading="lazy" decoding="async"></div>
+          <h3>Operate your fleet</h3>
+          <ul class="feature-list">
+            <li>Daily charging schedules</li>
+            <li>Peak-demand management</li>
+            <li>Service and battery constraints</li>
+          </ul>
+          <a class="mod-link" href="solutions.html">Explore the platform &rarr;</a>
+        </div>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-num">Module 01</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div>
+          <h3>Plan &mdash; know before you buy</h3>
+          <p>Test electrification scenarios on your own routes and walk into procurement with evidence instead of estimates.</p>
+          <ul class="feature-list">
+            <li>Fleet mix, battery sizing, and vehicle requirements</li>
+            <li>Depot layout, charger count, and grid capacity</li>
+            <li>Total cost of ownership under real operating conditions</li>
+          </ul>
+        </div>
+        <div class="feature">
+          <div class="feature-num">Module 02</div>
+          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></div>
+          <h3>Operate &mdash; charge at the lowest real cost</h3>
+          <p>Schedule every vehicle&rsquo;s charging around energy prices, grid limits, and tomorrow&rsquo;s service.</p>
+          <ul class="feature-list">
+            <li>Smart charging schedules that cut energy bills</li>
+            <li>Peak-demand reduction and energy-market participation</li>
+            <li>Degradation-aware strategies that extend battery life</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:48px;">
+        <a href="solutions.html" class="btn">See how it works <span class="btn-arrow">&#8594;</span></a>
+      </div>
+    </div>
+  </section>
+
+
 
   <section class="reveal sec-metrics">
     <div class="container">
@@ -129,60 +195,12 @@
         </div>
         <div class="console-src">
           <span style="max-width:860px;">Results from peer-reviewed case studies. Outcomes depend on fleet, climate, tariffs, infrastructure, and operating conditions.</span>
-          <a href="about.html">Read the research &rarr;</a>
+          <a href="about.html">Explore the case studies &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-
-
-  <section class="reveal sec-modules">
-    <div class="container">
-      <p class="kicker">What Nextdriv Does</p>
-      <h2 class="section-title">One platform from first plan to daily charge.</h2>
-      <p class="section-sub">Nextdriv models your fleet the way it actually runs &mdash; routes, schedules, weather, batteries, and electricity tariffs &mdash; then keeps optimizing after deployment. No black boxes: our models are peer-reviewed and published.</p>
-      <div class="features">
-        <div class="feature">
-          <div class="feature-num">Module 01</div>
-          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div>
-          <h3>Plan &mdash; know before you buy</h3>
-          <p>Test electrification scenarios on your own routes and walk into procurement with evidence instead of estimates.</p>
-          <ul class="feature-list">
-            <li>Fleet mix, battery sizing, and vehicle requirements</li>
-            <li>Depot layout, charger count, and grid capacity</li>
-            <li>Total cost of ownership under real operating conditions</li>
-          </ul>
-        </div>
-        <div class="feature">
-          <div class="feature-num">Module 02</div>
-          <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></div>
-          <h3>Operate &mdash; charge at the lowest real cost</h3>
-          <p>Schedule every vehicle&rsquo;s charging around energy prices, grid limits, and tomorrow&rsquo;s service.</p>
-          <ul class="feature-list">
-            <li>Smart charging schedules that cut energy bills</li>
-            <li>Peak-demand reduction and energy-market participation</li>
-            <li>Degradation-aware strategies that extend battery life</li>
-          </ul>
-        </div>
-      </div>
-      <div style="margin-top:48px;">
-        <a href="solutions.html" class="btn">See how it works <span class="btn-arrow">&#8594;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="mobile-compact">
-    <div class="container">
-      <p class="kicker">Why Nextdriv</p>
-      <ul class="feature-list">
-        <li>Evidence before procurement</li>
-        <li>One platform from planning to operations</li>
-        <li>Peer-reviewed, explainable models</li>
-      </ul>
-      <p class="section-sub" style="margin-top:22px;font-size:15.5px;">Built for transit agencies, municipalities, logistics fleets, ports, utilities, and electrification partners.</p>
-    </div>
-  </section>
 
 
   <section class="reveal sec-about">
@@ -269,6 +287,10 @@
         <p class="section-sub">We're partnering with a small number of fleets on structured pilots: you share routes, schedules, and electricity tariffs &mdash; we deliver a full electrification or charging-optimization analysis of your operation, typically within 8&ndash;12 weeks. You keep the results either way.</p>
         <div style="margin-top:36px;">
           <a href="pilot.html" class="btn btn--accent">See the pilot program <span class="btn-arrow">&#8594;</span></a>
+          <div class="pilot-mobile-cta">
+            <a href="contact.html" class="btn btn--accent">Request a fleet assessment <span class="btn-arrow">&#8594;</span></a>
+            <p class="pilot-note">Typical pilot duration: 8&ndash;12 weeks<br>Your data and results remain yours</p>
+          </div>
         </div>
       </div>
       <div class="split-img"><img src="assets/img/bus-charging.jpg" loading="lazy" decoding="async" width="816" height="1456" alt="Electric bus charging at a depot"></div>
