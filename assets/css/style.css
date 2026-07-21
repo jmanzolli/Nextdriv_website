@@ -344,10 +344,8 @@ summary:focus-visible {
   position: relative;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   transform-origin: 50% 100%;
-  transition: transform 1.15s cubic-bezier(0.22, 0.68, 0.32, 1);
+  will-change: transform;
 }
-
-.laptop.closed .laptop-screen { transform: rotateX(-72deg); }
 
 .laptop-screen::before {
   content: "";
@@ -443,8 +441,7 @@ summary:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   .slide { transition: none; }
-  .laptop-screen { transition: none; }
-  .laptop.closed .laptop-screen { transform: none; }
+  .laptop-screen { transform: none !important; }
 }
 
 /* ---------- Case study ---------- */
@@ -599,6 +596,12 @@ section { padding: 100px 0; }
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   margin-top: 56px;
+}
+
+.metrics--4 { grid-template-columns: repeat(4, 1fr); gap: 22px; }
+
+@media (max-width: 1080px) {
+  .metrics--4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 .metric {

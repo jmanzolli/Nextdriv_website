@@ -114,20 +114,28 @@ document.querySelectorAll('[data-slideshow]').forEach((box) => {
   restart();
 });
 
-// Laptop opens as it scrolls into view
+// Laptop lid follows scroll: opens on the way down, closes on the way up
 document.querySelectorAll('.laptop').forEach((laptop) => {
   if (reduceMotion) return;
-  laptop.classList.add('closed');
-  const opener = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          laptop.classList.remove('closed');
-          opener.unobserve(laptop);
-        }
-      });
-    },
-    { threshold: 0.45 }
-  );
-  opener.observe(laptop);
+  const screen = laptop.querySelector('.laptop-screen');
+  let ticking = false;
+  const CLOSED_ANGLE = -72;
+  const update = () => {
+    ticking = false;
+    const rect = laptop.getBoundingClientRect();
+    const vh = window.innerHeight;
+    // 0 when the laptop top is near the bottom edge, 1 once it reaches ~40% up
+    const progress = Math.min(1, Math.max(0, (vh * 0.92 - rect.top) / (vh * 0.55)));
+    const eased = 1 - Math.pow(1 - progress, 2.2);
+    screen.style.transform = 'rotateX(' + (CLOSED_ANGLE * (1 - eased)).toFixed(2) + 'deg)';
+  };
+  const onScroll = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
 });
