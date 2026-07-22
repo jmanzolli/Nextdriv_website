@@ -1300,6 +1300,19 @@ footer {
   line-height: 1.6;
 }
 
+.arcade-note { display: none; }
+.track-mobile, .check-mobile { display: none; }
+.cta-note { display: none; }
+
+.check-h {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7d9aff;
+  margin: 26px 0 4px;
+}
+
 /* ---------- Reveal animation ---------- */
 .reveal {
   opacity: 0;
@@ -1450,18 +1463,99 @@ footer {
   .btn { font-size: 15px; padding: 9px 10px 9px 20px; }
   .btn .btn-arrow { width: 34px; height: 34px; }
   .metrics--4 { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; }
-}
 
-@media (max-width: 680px) {
-  .slide-dots { gap: 6px; }
-  .slide-dots button {
-    width: 12px;
-    height: 12px;
-    box-sizing: content-box;
-    padding: 8px;
-    background-clip: content-box;
+  /* ---- inner-page heroes: compact, no photo ---- */
+  .hero--short { min-height: auto; padding: calc(var(--nav-h) + 38px) 0 40px; }
+  .hero--short .hero-bg { display: none; }
+  .hero--short {
+    background:
+      linear-gradient(rgba(95, 131, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(95, 131, 255, 0.045) 1px, transparent 1px),
+      var(--bg);
+    background-size: 44px 44px, 44px 44px, auto;
   }
-  .slide-caption { font-size: 14px; min-height: 62px; }
+
+  /* ---- Platform: laptop first, flat, user-controlled; Arcade hidden ---- */
+  .platform-page .sec-arcade { display: none; }
+  .platform-page .arcade-note { display: block; margin-top: 18px; font-size: 13px; color: #8b95a7; text-align: center; }
+  .laptop { width: 100%; margin-top: 24px; perspective: none; }
+  .laptop::before { inset: -4%; }
+  .laptop-screen {
+    border-width: 6px;
+    border-bottom-width: 10px;
+    border-radius: 10px 10px 0 0;
+    transform: none !important;
+  }
+  .laptop-base { width: 104%; margin-left: -2%; height: 9px; border-radius: 2px 2px 8px 8px; }
+  .slide-dots {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 2px;
+    gap: 8px;
+  }
+  .slide-dots button {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: none;
+    color: var(--text-dim);
+    font-size: 13.5px;
+    font-weight: 600;
+    font-family: var(--font);
+    white-space: nowrap;
+    box-sizing: border-box;
+    background-clip: border-box;
+  }
+  .slide-dots button.active { background: var(--accent); border-color: var(--accent); color: #fff; transform: none; }
+  .platform-page .faq details:nth-of-type(n+4) { display: none; }
+  .platform-page .sec-laptop .section-sub { display: none; }
+
+  /* ---- Pilot: toggle, timeline, compact checklist, single CTA note ---- */
+  .pilot-page .track-mobile { display: block; margin-top: 30px; }
+  .pilot-page .sec-tracks .features { display: none; }
+  .pilot-page .panel .features { gap: 0; margin-top: 28px; }
+  .pilot-page .panel .feature {
+    border-top: none;
+    border-left: 2px solid var(--accent);
+    padding: 0 0 22px 18px;
+    position: relative;
+  }
+  .pilot-page .panel .feature .icon-chip { display: none; }
+  .pilot-page .panel .feature h3 { font-size: 17px; margin-bottom: 4px; }
+  .pilot-page .panel .feature p { font-size: 14.5px; }
+  .pilot-page .panel .feature .feature-num { font-size: 12px; margin-bottom: 6px; }
+  .pilot-page .check-mobile { display: block; margin-top: 28px; }
+  .pilot-page .sec-checklist .tiles { display: none; }
+  .pilot-page .cta-note { display: block; margin-top: 16px; }
+
+  /* ---- About: compact team rows, 3 case metrics, light publications ---- */
+  .about-page .sec-mission { display: none; }
+  .team-grid--compact { gap: 18px; }
+  .team-grid--compact .member {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 4px 16px;
+    align-items: center;
+  }
+  .team-grid--compact .member img { width: 76px; height: 76px; border-radius: 12px; grid-row: span 3; }
+  .team-grid--compact .member .role { margin-top: 0; font-size: 11.5px; }
+  .team-grid--compact .member h3 { margin-top: 0; font-size: 17px; }
+  .team-grid--compact .member p:not(.role) { display: none; }
+  .team-grid--compact .member .li-link { margin-top: 0; font-size: 13.5px; }
+  .about-page .metrics--4 .metric:nth-child(2) { display: none; }
+  .pub img { display: none; }
+  .pub { padding: 18px; }
+  .pub h3 { font-size: 15px; }
+
+  /* ---- Contact: tighter opening, full-width submit ---- */
+  .contact-page > section:first-of-type { padding-top: calc(var(--nav-h) + 40px) !important; }
+  .contact-grid { gap: 34px; }
+  .contact-meta { margin-top: 20px; }
+  .contact-meta p:not(:first-child) { display: none; }
+  .contact-page form .btn { width: 100%; justify-content: space-between; min-height: 52px; }
 }
 
 @media (max-width: 480px) {

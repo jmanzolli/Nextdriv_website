@@ -24,7 +24,7 @@
   <meta property="og:locale" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="pilot-page">
 
   <nav class="nav">
     <div class="container nav-inner">
@@ -57,11 +57,19 @@
     </div>
   </header>
 
-  <section class="reveal">
+  <section class="reveal sec-tracks">
     <div class="container">
       <p class="kicker">The Offer</p>
       <h2 class="section-title">A full analysis of your operation. Yours to keep.</h2>
       <p class="section-sub">We partner with a limited number of fleets on structured pilots. You bring the data; we deliver an analysis built on peer-reviewed models &mdash; typically within 8&ndash;12 weeks. Choose the track that matches where you are:</p>
+      <div class="track-mobile">
+        <div class="mod-tabs" role="tablist" aria-label="Pilot tracks">
+          <button type="button" class="mod-tab active" data-pane="plan" role="tab" aria-selected="true">Planning electrification</button>
+          <button type="button" class="mod-tab" data-pane="operate" role="tab" aria-selected="false">Operating EVs</button>
+        </div>
+        <div class="mod-pane active" data-pane="plan" role="tabpanel"><p class="section-sub" style="margin-top:18px;">Determine route suitability, fleet and battery requirements, charger count, grid capacity, and lifecycle cost.</p></div>
+        <div class="mod-pane" data-pane="operate" role="tabpanel" hidden><p class="section-sub" style="margin-top:18px;">Optimize daily charging, energy costs, peak demand, battery impacts, and service readiness.</p></div>
+      </div>
       <div class="features">
         <div class="feature">
           <div class="feature-num">Track A</div>
@@ -92,7 +100,7 @@
   <section class="reveal">
     <div class="container">
       <div class="panel">
-        <p class="kicker">How It Works</p>
+        <p class="kicker sec-process-mark">How It Works</p>
         <h2 class="section-title">Four steps, 8&ndash;12 weeks.</h2>
         <div class="features">
           <div class="feature">
@@ -120,10 +128,22 @@
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal sec-checklist">
     <div class="container">
       <p class="kicker">Data Checklist</p>
       <h2 class="section-title">What we need from you.</h2>
+      <div class="check-mobile">
+        <p class="check-h">Required</p>
+        <ul class="feature-list">
+          <li>Routes and schedules</li>
+          <li>Current or candidate vehicles</li>
+          <li>Electricity tariff or a recent bill</li>
+        </ul>
+        <p class="check-h" style="margin-top:20px;">Helpful, but optional</p>
+        <ul class="feature-list">
+          <li>Telematics, energy, or GPS logs</li>
+        </ul>
+      </div>
       <div class="tiles">
         <div class="tile">
           <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div>
@@ -180,6 +200,7 @@
         <h2>Bring one route, one depot, or your whole network.</h2>
         <p>Book a 30-minute scoping call &mdash; we'll show you what evidence-based planning looks like on real data and send a pilot proposal after.</p>
         <a href="contact.html" class="btn btn--accent">Request a fleet assessment <span class="btn-arrow">&#8594;</span></a>
+        <p class="pilot-note cta-note">Typical duration: 8&ndash;12 weeks<br>Your operational data and results remain yours</p>
       </div>
     </div>
   </section>

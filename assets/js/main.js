@@ -42,6 +42,7 @@ document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
 // Count-up metrics
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const smallScreen = window.matchMedia('(max-width: 680px)').matches;
 const countObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((e) => {
@@ -89,6 +90,7 @@ document.querySelectorAll('[data-slideshow]').forEach((box) => {
     b.type = 'button';
     b.setAttribute('role', 'tab');
     b.setAttribute('aria-label', (slide.dataset.title || 'Slide ' + (k + 1)).slice(0, 60));
+    if (smallScreen && slide.dataset.short) b.textContent = slide.dataset.short;
     if (k === 0) b.classList.add('active');
     b.addEventListener('click', () => {
       show(k);
@@ -116,7 +118,7 @@ document.querySelectorAll('[data-slideshow]').forEach((box) => {
 
   const restart = () => {
     if (timer) clearTimeout(timer);
-    if (reduceMotion) return;
+    if (reduceMotion || smallScreen) return;
     const cur = slides[current];
     if (cur.tagName !== 'VIDEO') {
       timer = setTimeout(() => {
@@ -145,23 +147,25 @@ document.querySelectorAll('[data-slideshow]').forEach((box) => {
   });
 
   setCaption(slides[0]);
-  if (slides[0].tagName === 'VIDEO' && !reduceMotion) slides[0].play().catch(() => {});
+  if (slides[0].tagName === 'VIDEO' && !reduceMotion && !smallScreen) slides[0].play().catch(() => {});
   // retry playback when the slideshow becomes visible (autoplay may be deferred)
-  const visObserver = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      const cur = slides[current];
-      if (e.isIntersecting && cur.tagName === 'VIDEO' && cur.paused && !reduceMotion) {
-        cur.play().catch(() => {});
-      }
-    });
-  }, { threshold: 0.3 });
-  visObserver.observe(box);
+  if (!smallScreen) {
+    const visObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        const cur = slides[current];
+        if (e.isIntersecting && cur.tagName === 'VIDEO' && cur.paused && !reduceMotion) {
+          cur.play().catch(() => {});
+        }
+      });
+    }, { threshold: 0.3 });
+    visObserver.observe(box);
+  }
   restart();
 });
 
 // Laptop lid follows scroll: opens on the way down, closes on the way up
 document.querySelectorAll('.laptop').forEach((laptop) => {
-  if (reduceMotion) return;
+  if (reduceMotion || smallScreen) return;
   const screen = laptop.querySelector('.laptop-screen');
   let ticking = false;
   const CLOSED_ANGLE = -72;
@@ -187,7 +191,7 @@ document.querySelectorAll('.laptop').forEach((laptop) => {
 
 
 // Plan / Operate mobile tabs
-document.querySelectorAll('.mod-mobile').forEach((box) => {
+document.querySelectorAll('.mod-mobile, .track-mobile').forEach((box) => {
   const tabs = box.querySelectorAll('.mod-tab');
   const panes = box.querySelectorAll('.mod-pane');
   tabs.forEach((tab) => {
@@ -213,7 +217,7 @@ document.querySelectorAll('.mod-mobile').forEach((box) => {
 
 
 // Start the active tab video when it scrolls into view
-document.querySelectorAll('.mod-mobile').forEach((box) => {
+document.querySelectorAll('.mod-mobile, .track-mobile').forEach((box) => {
   if (reduceMotion) return;
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e) => {

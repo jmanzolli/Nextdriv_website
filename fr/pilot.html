@@ -24,7 +24,7 @@
   <meta property="og:locale" content="fr_CA">
   <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="pilot-page">
 
   <nav class="nav">
     <div class="container nav-inner">
@@ -57,11 +57,19 @@
     </div>
   </header>
 
-  <section class="reveal">
+  <section class="reveal sec-tracks">
     <div class="container">
       <p class="kicker">L'offre</p>
       <h2 class="section-title">Une analyse complète de vos opérations. Elle vous appartient.</h2>
       <p class="section-sub">Nous menons des projets pilotes structurés avec un nombre limité de flottes. Vous apportez les données&nbsp;; nous livrons une analyse fondée sur des modèles évalués par des pairs &mdash; généralement en 8 à 12 semaines. Choisissez le volet qui correspond à votre situation&nbsp;:</p>
+      <div class="track-mobile">
+        <div class="mod-tabs" role="tablist" aria-label="Volets du pilote">
+          <button type="button" class="mod-tab active" data-pane="plan" role="tab" aria-selected="true">Planifier l'électrification</button>
+          <button type="button" class="mod-tab" data-pane="operate" role="tab" aria-selected="false">Exploiter des VE</button>
+        </div>
+        <div class="mod-pane active" data-pane="plan" role="tabpanel"><p class="section-sub" style="margin-top:18px;">Déterminez la compatibilité des trajets, les besoins en flotte et en batteries, le nombre de bornes, la capacité réseau et le coût du cycle de vie.</p></div>
+        <div class="mod-pane" data-pane="operate" role="tabpanel" hidden><p class="section-sub" style="margin-top:18px;">Optimisez la recharge quotidienne, les coûts d'énergie, les pics de puissance, l'impact sur les batteries et la disponibilité du service.</p></div>
+      </div>
       <div class="features">
         <div class="feature">
           <div class="feature-num">Volet A</div>
@@ -92,7 +100,7 @@
   <section class="reveal">
     <div class="container">
       <div class="panel">
-        <p class="kicker">Comment ça marche</p>
+        <p class="kicker sec-process-mark">Comment ça marche</p>
         <h2 class="section-title">Quatre étapes, 8 à 12 semaines.</h2>
         <div class="features">
           <div class="feature">
@@ -120,10 +128,22 @@
     </div>
   </section>
 
-  <section class="reveal">
+  <section class="reveal sec-checklist">
     <div class="container">
       <p class="kicker">Liste des données</p>
       <h2 class="section-title">Ce dont nous avons besoin.</h2>
+      <div class="check-mobile">
+        <p class="check-h">Requis</p>
+        <ul class="feature-list">
+          <li>Trajets et horaires</li>
+          <li>Véhicules actuels ou envisagés</li>
+          <li>Tarif d'électricité ou facture récente</li>
+        </ul>
+        <p class="check-h" style="margin-top:20px;">Utile, mais facultatif</p>
+        <ul class="feature-list">
+          <li>Journaux télématiques, d'énergie ou GPS</li>
+        </ul>
+      </div>
       <div class="tiles">
         <div class="tile">
           <div class="icon-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7a4 4 0 0 0 0-8H9a4 4 0 0 1 0-8h7"/></svg></div>
@@ -180,6 +200,7 @@
         <h2>Apportez un trajet, un dépôt ou l'ensemble de votre réseau.</h2>
         <p>Réservez un appel de cadrage de 30 minutes &mdash; nous vous montrons ce que donne une planification fondée sur des données réelles, puis nous envoyons une proposition de pilote.</p>
         <a href="contact.html" class="btn btn--accent">Demander une évaluation de flotte <span class="btn-arrow">&#8594;</span></a>
+        <p class="pilot-note cta-note">Durée typique&nbsp;: 8 à 12 semaines<br>Vos données opérationnelles et vos résultats vous appartiennent</p>
       </div>
     </div>
   </section>
