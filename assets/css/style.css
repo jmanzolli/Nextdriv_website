@@ -1151,6 +1151,8 @@ section { padding: 100px 0; }
 
 .pub .journal { margin-top: 10px; font-size: 14px; color: var(--accent); font-weight: 600; }
 
+.pub .pub-desc { margin-top: 8px; font-size: 14px; color: var(--text-dim); line-height: 1.55; }
+
 /* ---------- CTA ---------- */
 .cta .panel {
   text-align: center;
@@ -1588,6 +1590,7 @@ footer {
   .team-grid--compact .member p:not(.role) { display: none; }
   .team-grid--compact .member .li-link { margin-top: 0; font-size: 13.5px; }
   .pub img { display: none; }
+  .pub .pub-desc { display: none; }
   .pub { padding: 18px; }
   .pub h3 { font-size: 15px; }
 
