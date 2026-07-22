@@ -1414,7 +1414,7 @@ footer {
   .sec-modules .container > div:last-child:not(.mod-mobile) { display: none; }
 
   /* metrics: light swipe cards, no console chrome */
-  .console { padding: 0; border: none; background: none; box-shadow: none; }
+  .console { padding: 0; border: none; background: none; box-shadow: none; overflow: visible; }
   .console::before { display: none; }
   .console-badge { display: none; }
   .metric-spark { display: none; }
