@@ -201,7 +201,27 @@ document.querySelectorAll('.mod-mobile').forEach((box) => {
         const on = p.dataset.pane === tab.dataset.pane;
         p.classList.toggle('active', on);
         p.hidden = !on;
+        const v = p.querySelector('video');
+        if (v) {
+          if (on && !reduceMotion) v.play().catch(() => {});
+          else v.pause();
+        }
       });
     });
   });
+});
+
+
+// Start the active tab video when it scrolls into view
+document.querySelectorAll('.mod-mobile').forEach((box) => {
+  if (reduceMotion) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      const v = box.querySelector('.mod-pane.active video');
+      if (!v) return;
+      if (e.isIntersecting) v.play().catch(() => {});
+      else v.pause();
+    });
+  }, { threshold: 0.25 });
+  obs.observe(box);
 });
