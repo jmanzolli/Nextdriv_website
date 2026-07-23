@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nextdriv.ca/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/contact.html"/>
+    <loc>https://nextdriv.ca/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/contact"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/fr/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/contact.html"/>
+    <loc>https://nextdriv.ca/fr/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/contact"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/about.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/about.html"/>
+    <loc>https://nextdriv.ca/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/about"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/fr/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/about.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/about.html"/>
+    <loc>https://nextdriv.ca/fr/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/about"/>
   </url>
   <url>
     <loc>https://nextdriv.ca/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/fr/index.html</loc>
+    <loc>https://nextdriv.ca/fr/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/solutions.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/solutions.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/solutions.html"/>
+    <loc>https://nextdriv.ca/solutions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/solutions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/solutions"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/fr/solutions.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/solutions.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/solutions.html"/>
+    <loc>https://nextdriv.ca/fr/solutions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/solutions"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/solutions"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/pilot.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/pilot.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/pilot.html"/>
+    <loc>https://nextdriv.ca/pilot</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/pilot"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/pilot"/>
   </url>
   <url>
-    <loc>https://nextdriv.ca/fr/pilot.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/pilot.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/pilot.html"/>
+    <loc>https://nextdriv.ca/fr/pilot</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextdriv.ca/pilot"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://nextdriv.ca/fr/pilot"/>
   </url>
 </urlset>
